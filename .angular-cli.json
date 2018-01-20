@@ -9,7 +9,7 @@
       "outDir": "dist",
       "assets": [
         "assets",
-        "favicon.ico"
+        "favicon.png"
       ],
       "index": "index.html",
       "main": "main.ts",
@@ -41,7 +41,9 @@
         "assets/formoid/formoid.min.js",
         "assets/bootstrapcarouselswipe/bootstrap-carousel-swipe.js",
         "assets/touchswipe/jquery.touch-swipe.min.js",
-        "assets/theme/js/script.js"
+        "assets/theme/js/script.js",
+        "assets/slick/slick.min.js",
+        "assets/slick/jquery-migrate.min.js"
       ],
       "environmentSource": "environments/environment.ts",
       "environments": {

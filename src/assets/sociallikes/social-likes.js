@@ -12,14 +12,14 @@
 
 /*global define:false, socialLikesButtons:false */
 
-(function(factory) {  // Try to register as an anonymous AMD module
+(function (factory) {  // Try to register as an anonymous AMD module
     if (typeof define === 'function' && define.amd) {
         define(['jquery'], factory);
     }
     else {
         factory(jQuery);
     }
-}(function($, undefined) {
+}(function ($, undefined) {
 
     'use strict';
 
@@ -37,30 +37,30 @@
         facebook: {
             // https://developers.facebook.com/docs/reference/fql/link_stat/
             counterUrl: 'https://graph.facebook.com/fql?q=SELECT+total_count+FROM+link_stat+WHERE+url%3D%22{url}%22&callback=?',
-            convertNumber: function(data) {
+            convertNumber: function (data) {
                 return data.data[0].total_count;
             },
             popupUrl: 'https://www.facebook.com/sharer/sharer.php?u={url}',
             popupWidth: 600,
             popupHeight: 500
         },
-        twitter: {
-            counterUrl: 'https://cdn.api.twitter.com/1/urls/count.json?url={url}&callback=?',
-            convertNumber: function(data) {
-                return data.count;
-            },
-            popupUrl: 'https://twitter.com/intent/tweet?url={url}&text={title}',
-            popupWidth: 600,
-            popupHeight: 450,
-            click: function() {
-                // Add colon to improve readability
-                if (!/[\.\?:\-–—]\s*$/.test(this.options.title)) this.options.title += ':';
-                return true;
-            }
-        },
+        // twitter: {
+        //     counterUrl: 'https://cdn.api.twitter.com/1/urls/count.json?url={url}&callback=?',
+        //     convertNumber: function(data) {
+        //         return data.count;
+        //     },
+        //     popupUrl: 'https://twitter.com/intent/tweet?url={url}&text={title}',
+        //     popupWidth: 600,
+        //     popupHeight: 450,
+        //     click: function() {
+        //         // Add colon to improve readability
+        //         if (!/[\.\?:\-–—]\s*$/.test(this.options.title)) this.options.title += ':';
+        //         return true;
+        //     }
+        // },
         mailru: {
             counterUrl: protocol + '//connect.mail.ru/share_count?url_list={url}&callback=1&func=?',
-            convertNumber: function(data) {
+            convertNumber: function (data) {
                 for (var url in data) {
                     if (data.hasOwnProperty(url)) {
                         return data[url].shares;
@@ -73,13 +73,13 @@
         },
         vkontakte: {
             counterUrl: 'https://vk.com/share.php?act=count&url={url}&index={index}',
-            counter: function(jsonUrl, deferred) {
+            counter: function (jsonUrl, deferred) {
                 var options = services.vkontakte;
                 if (!options._) {
                     options._ = [];
                     if (!window.VK) window.VK = {};
                     window.VK.Share = {
-                        count: function(idx, number) {
+                        count: function (idx, number) {
                             options._[idx].resolve(number);
                         }
                     };
@@ -87,7 +87,7 @@
 
                 var index = options._.length;
                 options._.push(deferred);
-                $.getScript(makeUrl(jsonUrl, {index: index}))
+                $.getScript(makeUrl(jsonUrl, { index: index }))
                     .fail(deferred.reject);
             },
             popupUrl: protocol + '//vk.com/share.php?url={url}&title={title}',
@@ -97,19 +97,19 @@
         odnoklassniki: {
             // HTTPS not supported
             counterUrl: isHttps ? undefined : 'http://connect.ok.ru/dk?st.cmd=extLike&ref={url}&uid={index}',
-            counter: function(jsonUrl, deferred) {
+            counter: function (jsonUrl, deferred) {
                 var options = services.odnoklassniki;
                 if (!options._) {
                     options._ = [];
                     if (!window.ODKL) window.ODKL = {};
-                    window.ODKL.updateCount = function(idx, number) {
+                    window.ODKL.updateCount = function (idx, number) {
                         options._[idx].resolve(number);
                     };
                 }
 
                 var index = options._.length;
                 options._.push(deferred);
-                $.getScript(makeUrl(jsonUrl, {index: index}))
+                $.getScript(makeUrl(jsonUrl, { index: index }))
                     .fail(deferred.reject);
             },
             popupUrl: 'http://connect.ok.ru/dk?st.cmd=WidgetSharePreview&service=odnoklassniki&st.shareUrl={url}',
@@ -119,7 +119,7 @@
         plusone: {
             // HTTPS not supported yet: http://clubs.ya.ru/share/1499
             counterUrl: isHttps ? undefined : 'http://share.yandex.ru/gpp.xml?url={url}',
-            counter: function(jsonUrl, deferred) {
+            counter: function (jsonUrl, deferred) {
                 var options = services.plusone;
                 if (options._) {
                     // Reject all counters except the first because Yandex Share counter doesn’t return URL
@@ -129,7 +129,7 @@
 
                 if (!window.services) window.services = {};
                 window.services.gplus = {
-                    cb: function(number) {
+                    cb: function (number) {
                         if (typeof number === 'string') {
                             number = number.replace(/\D/g, '');
                         }
@@ -145,15 +145,15 @@
             popupWidth: 700,
             popupHeight: 500
         },
-        pinterest: {
-            counterUrl: protocol + '//api.pinterest.com/v1/urls/count.json?url={url}&callback=?',
-            convertNumber: function(data) {
-                return data.count;
-            },
-            popupUrl: protocol + '//pinterest.com/pin/create/button/?url={url}&description={title}',
-            popupWidth: 630,
-            popupHeight: 270
-        }
+        // pinterest: {
+        //     counterUrl: protocol + '//api.pinterest.com/v1/urls/count.json?url={url}&callback=?',
+        //     convertNumber: function (data) {
+        //         return data.count;
+        //     },
+        //     popupUrl: protocol + '//pinterest.com/pin/create/button/?url={url}&description={title}',
+        //     popupWidth: 630,
+        //     popupHeight: 270
+        // }
     };
 
 
@@ -162,7 +162,7 @@
      */
     var counters = {
         promises: {},
-        fetch: function(service, url, extraOptions) {
+        fetch: function (service, url, extraOptions) {
             if (!counters.promises[service]) counters.promises[service] = {};
             var servicePromises = counters.promises[service];
 
@@ -172,14 +172,14 @@
             else {
                 var options = $.extend({}, services[service], extraOptions);
                 var deferred = $.Deferred();
-                var jsonUrl = options.counterUrl && makeUrl(options.counterUrl, {url: url});
+                var jsonUrl = options.counterUrl && makeUrl(options.counterUrl, { url: url });
 
                 if (jsonUrl && $.isFunction(options.counter)) {
                     options.counter(jsonUrl, deferred);
                 }
                 else if (options.counterUrl) {
                     $.getJSON(jsonUrl)
-                        .done(function(data) {
+                        .done(function (data) {
                             try {
                                 var number = data;
                                 if ($.isFunction(options.convertNumber)) {
@@ -207,8 +207,8 @@
     /**
      * jQuery plugin
      */
-    $.fn.socialLikes = function(options) {
-        return this.each(function() {
+    $.fn.socialLikes = function (options) {
+        return this.each(function () {
             var elem = $(this);
             var instance = elem.data(prefix);
             if (instance) {
@@ -242,7 +242,7 @@
     }
 
     SocialLikes.prototype = {
-        init: function() {
+        init: function () {
             // Add class in case of manual initialization
             this.container.addClass(prefix);
 
@@ -259,7 +259,7 @@
             this.makeSingleButton();
 
             this.buttons = [];
-            buttons.each($.proxy(function(idx, elem) {
+            buttons.each($.proxy(function (idx, elem) {
                 var button = new Button($(elem), this.options);
                 this.buttons.push(button);
                 if (button.options.counterUrl) this.countersLeft++;
@@ -273,19 +273,19 @@
                 this.appear();
             }
         },
-        initUserButtons: function() {
+        initUserButtons: function () {
             if (!this.userButtonInited && window.socialLikesButtons) {
                 $.extend(true, services, socialLikesButtons);
             }
             this.userButtonInited = true;
         },
-        makeSingleButton: function() {
+        makeSingleButton: function () {
             if (!this.single) return;
 
             var container = this.container;
             container.addClass(prefix + '_vertical');
-            container.wrap($('<div>', {'class': prefix + '_single-w'}));
-            container.wrapInner($('<div>', {'class': prefix + '__single-container'}));
+            container.wrap($('<div>', { 'class': prefix + '_single-w' }));
+            container.wrapInner($('<div>', { 'class': prefix + '__single-container' }));
             var wrapper = container.parent();
 
             // Widget
@@ -294,8 +294,8 @@
             });
             var button = $(template(
                 '<div class="{buttonCls}">' +
-                    '<span class="{iconCls}"></span>' +
-                    '{title}' +
+                '<span class="{iconCls}"></span>' +
+                '{title}' +
                 '</div>',
                 {
                     buttonCls: getElementClassNames('button', 'single'),
@@ -306,13 +306,13 @@
             widget.append(button);
             wrapper.append(widget);
 
-            widget.on('click', function() {
+            widget.on('click', function () {
                 var activeClass = prefix + '__widget_active';
                 widget.toggleClass(activeClass);
                 if (widget.hasClass(activeClass)) {
-                    container.css({left: -(container.width()-widget.width())/2,  top: -container.height()});
+                    container.css({ left: -(container.width() - widget.width()) / 2, top: -container.height() });
                     showInViewport(container);
-                    closeOnClick(container, function() {
+                    closeOnClick(container, function () {
                         widget.removeClass(activeClass);
                     });
                 }
@@ -324,7 +324,7 @@
 
             this.widget = widget;
         },
-        update: function(options) {
+        update: function (options) {
             if (!options.forceUpdate && options.url === this.options.url) return;
 
             // Reset counters
@@ -338,7 +338,7 @@
                 this.buttons[buttonIdx].update(options);
             }
         },
-        updateCounter: function(e, service, number) {
+        updateCounter: function (e, service, number) {
             if (number) {
                 this.number += number;
                 if (this.single) {
@@ -352,10 +352,10 @@
                 this.ready();
             }
         },
-        appear: function() {
+        appear: function () {
             this.container.addClass(prefix + '_visible');
         },
-        ready: function(silent) {
+        ready: function (silent) {
             if (this.timeout) {
                 clearTimeout(this.timeout);
             }
@@ -364,7 +364,7 @@
                 this.container.trigger('ready.' + prefix, this.number);
             }
         },
-        getCounterElem: function() {
+        getCounterElem: function () {
             var counterElem = this.widget.find('.' + classPrefix + 'counter_single');
             if (!counterElem.length) {
                 counterElem = $('<span>', {
@@ -387,20 +387,20 @@
     }
 
     Button.prototype = {
-        init: function() {
+        init: function () {
             this.detectParams();
             if (this.options.initHtml) this.initHtml();
             else this.widget.on('click', $.proxy(this.click, this));
             setTimeout($.proxy(this.initCounter, this), 0);
         },
 
-        update: function(options) {
-            $.extend(this.options, {forceUpdate: false}, options);
+        update: function (options) {
+            $.extend(this.options, { forceUpdate: false }, options);
             this.widget.find('.' + prefix + '__counter').remove();  // Remove old counter
             this.initCounter();
         },
 
-        detectService: function() {
+        detectService: function () {
             var service = this.widget.data('service');
             if (!service) {
                 // class="facebook"
@@ -419,7 +419,7 @@
             $.extend(this.options, services[service]);
         },
 
-        detectParams: function() {
+        detectParams: function () {
             var data = this.widget.data();
 
             // Custom page counter URL or number
@@ -444,7 +444,7 @@
             }
         },
 
-        initHtml: function() {
+        initHtml: function () {
             var options = this.options;
             var widget = this.widget;
 
@@ -479,13 +479,13 @@
             widget.addClass(this.getElementClassNames('widget'));
 
             // Icon
-            button.prepend($('<span>', {'class': this.getElementClassNames('icon')}));
+            button.prepend($('<span>', { 'class': this.getElementClassNames('icon') }));
 
             widget.empty().append(button);
             this.button = button;
         },
 
-        initCounter: function() {
+        initCounter: function () {
             if (this.options.counters) {
                 if (this.options.counterNumber) {
                     this.updateCounter(this.options.counterNumber);
@@ -501,7 +501,7 @@
             }
         },
 
-        cloneDataAttrs: function(source, destination) {
+        cloneDataAttrs: function (source, destination) {
             var data = source.data();
             for (var key in data) {
                 if (data.hasOwnProperty(key)) {
@@ -510,11 +510,11 @@
             }
         },
 
-        getElementClassNames: function(elem) {
+        getElementClassNames: function (elem) {
             return getElementClassNames(elem, this.service);
         },
 
-        updateCounter: function(number) {
+        updateCounter: function (number) {
             number = parseInt(number, 10) || 0;
 
             var params = {
@@ -531,7 +531,7 @@
             this.widget.trigger('counter.' + prefix, [this.service, number]);
         },
 
-        click: function(e) {
+        click: function (e) {
             var options = this.options;
             var process = true;
             if ($.isFunction(options.click)) {
@@ -551,26 +551,26 @@
             return false;
         },
 
-        addAdditionalParamsToUrl: function(url) {
+        addAdditionalParamsToUrl: function (url) {
             var params = $.param($.extend(this.widget.data(), this.options.data));
             if ($.isEmptyObject(params)) return url;
             var glue = url.indexOf('?') === -1 ? '?' : '&';
             return url + glue + params;
         },
 
-        openPopup: function(url, params) {
-            var left = Math.round(screen.width/2 - params.width/2);
+        openPopup: function (url, params) {
+            var left = Math.round(screen.width / 2 - params.width / 2);
             var top = 0;
             if (screen.height > params.height) {
-                top = Math.round(screen.height/3 - params.height/2);
+                top = Math.round(screen.height / 3 - params.height / 2);
             }
 
             var win = window.open(url, 'sl_' + this.service, 'left=' + left + ',top=' + top + ',' +
-               'width=' + params.width + ',height=' + params.height + ',personalbar=0,toolbar=0,scrollbars=1,resizable=1');
+                'width=' + params.width + ',height=' + params.height + ',personalbar=0,toolbar=0,scrollbars=1,resizable=1');
             if (win) {
                 win.focus();
                 this.widget.trigger('popup_opened.' + prefix, [this.service, win]);
-                var timer = setInterval($.proxy(function() {
+                var timer = setInterval($.proxy(function () {
                     if (!win.closed) return;
                     clearInterval(timer);
                     this.widget.trigger('popup_closed.' + prefix, this.service);
@@ -587,7 +587,7 @@
      * Helpers
      */
 
-     // Camelize data-attributes
+    // Camelize data-attributes
     function dataToOptions(elem) {
         function upper(m, l) {
             return l.toUpper();
@@ -608,7 +608,7 @@
     }
 
     function template(tmpl, context, filter) {
-        return tmpl.replace(/\{([^\}]+)\}/g, function(m, key) {
+        return tmpl.replace(/\{([^\}]+)\}/g, function (m, key) {
             // If key doesn't exists in the context we should keep template tag as is
             return key in context ? (filter ? filter(context[key]) : context[key]) : m;
         });
@@ -655,7 +655,7 @@
     /**
      * Auto initialization
      */
-    $(function() {
+    $(function () {
         $('.' + prefix).socialLikes();
     });
 

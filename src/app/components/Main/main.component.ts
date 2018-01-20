@@ -66,24 +66,55 @@ export class MainComponent implements OnInit {
 
   ngAfterViewInit() {
 
-    $('#recipeCarousel').carousel({
-      interval: 10000
-    })
-
-    $('.carousel .carousel-item').each(function () {
-      var next = $(this).next();
-      if (!next.length) {
-        next = $(this).siblings(':first');
-      }
-      next.children(':first-child').clone().appendTo($(this));
-
-      if (next.next().length > 0) {
-        next.next().children(':first-child').clone().appendTo($(this));
-      }
-      else {
-        $(this).siblings(':first').children(':first-child').clone().appendTo($(this));
-      }
+    $(".slider").not('.slick-initialized').slick({
+      autoplay: true,
+      dots: true,
+      infinite: true,
+      speed: 500,
+      slidesToShow: 3,
+      slidesToScroll: 1,
+      responsive: [
+        {
+          breakpoint: 1200,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 1,
+            infinite: true,
+            dots: true
+          }
+        },
+        {
+          breakpoint: 992,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            infinite: true,
+          }
+        },
+        // You can unslick at a given breakpoint now by adding:
+        // settings: "unslick"
+        // instead of a settings object
+      ]
     });
+
+    // $('#recipeCarousel').carousel({
+    //   interval: 10000
+    // })
+
+    // $('.carousel .carousel-item').each(function () {
+    //   var next = $(this).next();
+    //   if (!next.length) {
+    //     next = $(this).siblings(':first');
+    //   }
+    //   next.children(':first-child').clone().appendTo($(this));
+
+    //   if (next.next().length > 0) {
+    //     next.next().children(':first-child').clone().appendTo($(this));
+    //   }
+    //   else {
+    //     $(this).siblings(':first').children(':first-child').clone().appendTo($(this));
+    //   }
+    // });
 
 
   }

@@ -13,3 +13,6 @@
 @import './assets/theme/css/style.css';
 @import './assets/gallery/style.css';
 @import './assets/mobirise/css/mbr-additional.css';
+
+@import './assets/slick/slick.css';
+@import './assets/slick/slick-theme.css';
