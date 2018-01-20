@@ -1,0 +1,26 @@
+.customNavbar{
+    height: 70px;
+    background-color: #737c9d;
+    border-radius: 0px;
+}
+
+.customNavbarBrand{
+    font-family: Arial;
+	font-size: 19px;
+	/* font-weight: bold; */
+	text-align: left;
+    color: #ffffff;
+    margin-left:10px !important;
+}
+
+.navbarElem{
+    margin-left: 40px;
+}
+
+.navbarElemIcon{
+    padding-top: 5px;
+}
+
+.navbarElemIconRight{
+    margin-right: 30px;
+}

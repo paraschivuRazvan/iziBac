@@ -1,0 +1,78 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "project": {
+    "name": "iziBac"
+  },
+  "apps": [
+    {
+      "root": "src",
+      "outDir": "dist",
+      "assets": [
+        "assets",
+        "favicon.ico"
+      ],
+      "index": "index.html",
+      "main": "main.ts",
+      "polyfills": "polyfills.ts",
+      "test": "test.ts",
+      "tsconfig": "tsconfig.app.json",
+      "testTsconfig": "tsconfig.spec.json",
+      "prefix": "app",
+      "styles": [
+        "styles.css"
+      ],
+      "scripts": [
+        "../node_modules/jquery/dist/jquery.min.js",
+        "assets/popper/popper.min.js",
+        "assets/tether/tether.min.js",
+        "assets/bootstrap/js/bootstrap.min.js",
+        "assets/smoothscroll/smooth-scroll.js",
+        "assets/dropdown/js/script.min.js",
+        "assets/parallax/jarallax.min.js",
+        "assets/masonry/masonry.pkgd.min.js",
+        "assets/imagesloaded/imagesloaded.pkgd.min.js",
+        "assets/datatables/jquery.data-tables.min.js",
+        "assets/datatables/data-tables.bootstrap4.min.js",
+        "assets/vimeoplayer/jquery.mb.vimeo_player.js",
+        "assets/sociallikes/social-likes.js",
+        "assets/slidervideo/script.js",
+        "assets/gallery/player.min.js",
+        "assets/gallery/script.js",
+        "assets/formoid/formoid.min.js",
+        "assets/bootstrapcarouselswipe/bootstrap-carousel-swipe.js",
+        "assets/touchswipe/jquery.touch-swipe.min.js",
+        "assets/theme/js/script.js"
+      ],
+      "environmentSource": "environments/environment.ts",
+      "environments": {
+        "dev": "environments/environment.ts",
+        "prod": "environments/environment.prod.ts"
+      }
+    }
+  ],
+  "e2e": {
+    "protractor": {
+      "config": "./protractor.conf.js"
+    }
+  },
+  "lint": [
+    {
+      "project": "src/tsconfig.app.json"
+    },
+    {
+      "project": "src/tsconfig.spec.json"
+    },
+    {
+      "project": "e2e/tsconfig.e2e.json"
+    }
+  ],
+  "test": {
+    "karma": {
+      "config": "./karma.conf.js"
+    }
+  },
+  "defaults": {
+    "styleExt": "css",
+    "component": {}
+  }
+}

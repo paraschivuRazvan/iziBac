@@ -1,0 +1,102 @@
+<!-- Sidebar -->
+<div class="sidebar-wrapper" [ngClass]="{'sidebar-wrapperC': currentUser.role == 'Coach', 'sidebar-wrapperTL': currentUser.role != 'Coach'}">
+  <div class="row">
+    <div class="col-4 col-md-4 col-sm-4 col-xs-4 noPaddingRight fullHeight avatarSideMenu" *ngIf="currentUser.role == 'Coach'">
+      <div class="element d-flex flex-column teamMembersSideMenu">
+        <div class="teamMemberAvatarDiv">
+          <img src="../Main//avatar2.png" class="rounded-circle profileImgSidemenu mx-auto d-block">
+        </div>
+        <div class="teamMemberAvatarDiv">
+          <img src="../Main//avatar2.png" class="rounded-circle profileImgSidemenu mx-auto d-block">
+        </div>
+        <div class="teamMemberAvatarDiv">
+          <img src="../Main//avatar2.png" class="rounded-circle profileImgSidemenu mx-auto d-block">
+        </div>
+        <div class="teamMemberAvatarDiv">
+          <img src="../Main//avatar2.png" class="rounded-circle profileImgSidemenu mx-auto d-block">
+        </div>
+        <div class="teamMemberAvatarDiv">
+          <img src="../Main//avatar2.png" class="rounded-circle profileImgSidemenu mx-auto d-block">
+        </div>
+        <div class="teamMemberAvatarDiv">
+          <img src="../Main//avatar2.png" class="rounded-circle profileImgSidemenu mx-auto d-block">
+        </div>
+        <div class="teamMemberAvatarDiv">
+          <img src="../Main//avatar2.png" class="rounded-circle profileImgSidemenu mx-auto d-block">
+        </div>
+        <div class="teamMemberAvatarDiv">
+          <img src="../Main//avatar2.png" class="rounded-circle profileImgSidemenu mx-auto d-block">
+        </div>
+        <div class="teamMemberAvatarDiv">
+          <img src="../Main//avatar2.png" class="rounded-circle profileImgSidemenu mx-auto d-block">
+        </div>
+        <div class="teamMemberAvatarDiv">
+          <img src="../Main//avatar2.png" class="rounded-circle profileImgSidemenu mx-auto d-block">
+        </div>
+      </div>
+    </div>
+
+    <div class="col-8 col-md-8 col-sm-8 col-xs-8" [ngClass]="{'noPaddingLeft': currentUser.role == 'Coach'}">
+      <div class="element d-flex flex-column subSideMenu">
+        <ul class="nav nav-pills flex-column">
+          <li class="nav-item">
+            <img src="../Main//ico-overview-off.svg" class="menuIcon">
+            <span class="customMenuItem">Overview</span>
+          </li>
+
+          <li class="nav-item active">
+            <img src="../Main//ico-progress-on.svg" class="menuIcon">
+            <span class="customMenuItem active">Competency tracker</span>
+          </li>
+          <li class="subMenuItem">
+            Planning
+          </li>
+          <li class="subMenuItem">
+            Active sales management
+          </li>
+          <li class="subMenuItem">
+            Performance management
+          </li>
+          <li class="subMenuItem">
+            Stakeholder management
+          </li>
+          <li class="subMenuItem">
+            Motivational leadership
+          </li>
+          <li class="subMenuItem">
+            Commercial acumen
+          </li>
+          <li class="subMenuItem">
+            Communication
+          </li>
+
+          <li class="nav-item">
+            <img src="../Main//ico-tools-off.svg" class="menuIcon">
+            <span class="customMenuItem">Tools</span>
+          </li>
+          <li class="subMenuItem">
+            Action plan
+          </li>
+          <li class="subMenuItem">
+            Perform model
+          </li>
+          <li class="subMenuItem">
+            Score
+          </li>
+          <li class="subMenuItem">
+            RACI
+          </li>
+          <li class="subMenuItem">
+            Covey time management
+          </li>
+
+          <li class="nav-item">
+            <img src="../Main//ico-kpi-off.svg" class="menuIcon">
+            <span class="customMenuItem">KPIs</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- /#sidebar-wrapper -->

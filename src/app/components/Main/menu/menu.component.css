@@ -1,0 +1,105 @@
+.sidemenuProfileInfo{
+    padding-top:40px;
+    padding-bottom:15px;
+}
+
+.profileImg{
+    width:88px;
+    height:88px;
+}
+
+.sidemenuProfileName{
+    margin-top:15px;
+
+    font-family: Arial;
+	font-size: 20px;
+	/* font-weight: bold; */
+	line-height: 1.2;
+	text-align: center;
+	color: #404562;
+}
+
+.sidemenuProfileRole{
+    margin-top:5px;
+
+    font-family: Arial;
+	font-size: 12px;
+	line-height: 1.25;
+	text-align: center;
+	color: #404562;
+}
+
+.nav-item{
+	margin-top:30px;
+	cursor: pointer;
+}
+
+.nav-item.active{
+	font-weight: bold;
+	color: #404562 !important;
+}
+
+.customMenuItem.active{
+	font-weight: bold;
+	color: #404562 !important;
+}
+
+.nav-item:hover{
+	font-weight: bold;
+	color: #404562 !important;
+}
+
+.customMenuItem{
+	font-family: Arial;
+	font-size: 14px;
+	text-align: left;
+	color: #b8bcca;
+	margin-left:10px;
+}
+
+.menuIcon{
+	margin-left:37px;
+	margin-right:10px;
+}
+
+/*
+* Sidebar
+*/
+  
+.sidebar {
+    position: fixed;
+
+    width:200px;
+    background-color: #ffffff;
+    border-right: solid 1px #d8dae0;
+
+    top: 70px;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+    /* padding: 20px; */
+    overflow-x: hidden;
+    overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
+}
+  
+/* Sidebar navigation */
+.sidebar {
+    padding-left: 0;
+    padding-right: 0;
+}
+  
+.sidebar .nav {
+    margin-bottom: 20px;
+}
+  
+.sidebar .nav-item {
+    width: 100%;
+}
+  
+.sidebar .nav-item + .nav-item {
+    margin-left: 0;
+}
+  
+.sidebar .nav-link {
+    border-radius: 0;
+}

@@ -1,0 +1,287 @@
+<div class="wrapper" [ngClass]="{'toggled': testVar === true, 'wrapperC': currentUser.role == 'Coach', 'wrapperTL': currentUser.role != 'Coach'}">
+  <div class="container-fluid xOverflowHidden">
+
+    <app-submenu></app-submenu>
+
+    <!-- Page Content -->
+    <main class="pt-3 mainBody">
+      <div class="mainBodyHeader d-flex align-items-center h100">
+        <div class="innerBodyContainerHeader">
+          <div class="row d-flex align-items-center h100">
+            Competency tracker
+            <div class="mainBodyHeaderButtons ml-auto row">
+
+              <div class="bodyHeaderBtn">
+                <button class="btn btn-lg customIconBtn d-flex align-items-center h100">
+                  <img src="../Main//ico-print.svg" class="buttonIcon"> Print
+                </button>
+              </div>
+
+              <div class="bodyHeaderBtn">
+                <button class="btn btn-lg customIconBtn d-flex align-items-center h100">
+                  <img src="../Main//ico-share.svg" class="buttonIcon"> Share
+                </button>
+              </div>
+
+              <!-- <input class="btn btn-lg customPrimaryBtn customPrimaryBtnBodyHeader" type="submit" value="Save and send" (click)="createPassword()"> -->
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <hr class="custom_hr">
+
+      <div class="innerBodyContainer">
+
+        <button (click)="test()">Test</button>
+
+        <div class="globalScore">
+          <div class="subareaHeading">
+            Global Score
+          </div>
+
+          <div class="row">
+
+            <div class="col-3 col-md-3 col-sm-3 col-xs-3 col averageScoreDiv">
+              <div class="doughnutChartContainerCentered">
+                <canvas id="doughnut" height="280" class="drawValue"></canvas>
+                <div class="chartScore">
+                  {{serverResp.personalGLobalScore.score | number : '1.2-2'}}
+                </div>
+                <div class="row underChartDivs">
+                  <div class="col innerChartLabel leftLabel">
+                    BASE
+                    <div class="innerChartValue">
+                      {{serverResp.personalGLobalScore.base | number : '1.2-2'}}
+                    </div>
+                  </div>
+                  <div class="col innerChartLabel rightLabel">
+                    GOAL
+                    <div class="innerChartValue">
+                      {{serverResp.personalGLobalScore.goal | number : '1.2-2'}}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-9 col-md-9 col-sm-9 col-xs-9 col">
+              <div class="chartContainer">
+                <canvas id="myChart" height="300"></canvas>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+        <hr class="custom_hr">
+
+        <div class="competencyScores">
+
+          <div class="subareaHeading">
+            Competency Scores
+          </div>
+
+          <div class="competencyCharts">
+
+            <div class="row" *ngFor="let item of serverResp.competencyScores; let i = index; let last = last" [ngSwitch]="i%4" [hidden]="i%4">
+              <div class="col col-xs-3 col-sm-3 col-md-3 col-lg-3" *ngSwitchCase="0">
+                <div class="doughnutChartContainer" *ngIf="serverResp.competencyScores[i]">
+                  <canvas [id]="'doughnut-' + i" height="280" class="drawValue"></canvas>
+                  <div class="chartScore">
+                    {{serverResp.competencyScores[i].score | number : '1.2-2'}}
+                  </div>
+                  <div class="row underChartDivs">
+                    <div class="col innerChartLabel leftLabel">
+                      BASE
+                      <div class="innerChartValue">
+                        {{serverResp.competencyScores[i].base | number : '1.2-2'}}
+                      </div>
+                    </div>
+                    <div class="col innerChartLabel rightLabel">
+                      GOAL
+                      <div class="innerChartValue">
+                        {{serverResp.competencyScores[i].goal | number : '1.2-2'}}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col col-xs-3 col-sm-3 col-md-3 col-lg-3" *ngSwitchCase="0">
+                <div class="doughnutChartContainer" *ngIf="serverResp.competencyScores[i+1]">
+                  <canvas [id]="'doughnut-' + (i+1)" height="280" class="drawValue"></canvas>
+                  <div class="chartScore">
+                    {{serverResp.competencyScores[i+1].score | number : '1.2-2'}}
+                  </div>
+                  <div class="row underChartDivs">
+                    <div class="col innerChartLabel leftLabel">
+                      BASE
+                      <div class="innerChartValue">
+                        {{serverResp.competencyScores[i+1].base | number : '1.2-2'}}
+                      </div>
+                    </div>
+                    <div class="col innerChartLabel rightLabel">
+                      GOAL
+                      <div class="innerChartValue">
+                        {{serverResp.competencyScores[i+1].goal | number : '1.2-2'}}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col col-xs-3 col-sm-3 col-md-3 col-lg-3" *ngSwitchCase="0">
+                <div class="doughnutChartContainer" *ngIf="serverResp.competencyScores[i+2]">
+                  <canvas [id]="'doughnut-' + (i+2)" height="280" class="drawValue"></canvas>
+                  <div class="chartScore">
+                    {{serverResp.competencyScores[i+2].score | number : '1.2-2'}}
+                  </div>
+                  <div class="row underChartDivs">
+                    <div class="col innerChartLabel leftLabel">
+                      BASE
+                      <div class="innerChartValue">
+                        {{serverResp.competencyScores[i+2].base | number : '1.2-2'}}
+                      </div>
+                    </div>
+                    <div class="col innerChartLabel rightLabel">
+                      GOAL
+                      <div class="innerChartValue">
+                        {{serverResp.competencyScores[i+2].goal | number : '1.2-2'}}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col col-xs-3 col-sm-3 col-md-3 col-lg-3" *ngSwitchCase="0">
+                <div class="doughnutChartContainer" *ngIf="serverResp.competencyScores[i+3]">
+                  <canvas [id]="'doughnut-' + (i+3)" height="280" class="drawValue"></canvas>
+                  <div class="chartScore">
+                    {{serverResp.competencyScores[i+3]?.score | number : '1.2-2'}}
+                  </div>
+                  <div class="row underChartDivs">
+                    <div class="col innerChartLabel leftLabel">
+                      BASE
+                      <div class="innerChartValue">
+                        {{serverResp.competencyScores[i+3]?.base | number : '1.2-2'}}
+                      </div>
+                    </div>
+                    <div class="col innerChartLabel rightLabel">
+                      GOAL
+                      <div class="innerChartValue">
+                        {{serverResp.competencyScores[i+3]?.goal | number : '1.2-2'}}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <hr class="custom_hr">
+
+        <div class="behavior">
+
+          <div class="row  d-flex align-items-center h100">
+            <div class="col-9">
+              <div class="behaviorItemHeader">
+                <div class="row">
+                  <div class="col">
+                    Behavior:
+                  </div>
+                  <div class="col resultsTag">
+                    Results:
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-3">
+              <div class="behaviorItemResults">
+                <div class="row">
+
+                  <div class="col">
+                    <div class="row">
+                      <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+                          aria-expanded="false">
+                          {{firstWeek}}
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                          <a class="dropdown-item" (click)="selectFirstWeek(0)">Week 0</a>
+                          <a class="dropdown-item" (click)="selectFirstWeek(1)">Week 1</a>
+                          <a class="dropdown-item" (click)="selectFirstWeek(2)">Week 2</a>
+                          <a class="dropdown-item" (click)="selectFirstWeek(3)">Week 3</a>
+                          <a class="dropdown-item" (click)="selectFirstWeek(4)">Week 4</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col">
+                    <div class="row">
+                      <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+                          aria-expanded="false">
+                          {{secondWeek}}
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                          <a class="dropdown-item" (click)="selectSecondWeek(0)">Week 0</a>
+                          <a class="dropdown-item" (click)="selectSecondWeek(1)">Week 1</a>
+                          <a class="dropdown-item" (click)="selectSecondWeek(2)">Week 2</a>
+                          <a class="dropdown-item" (click)="selectSecondWeek(3)">Week 3</a>
+                          <a class="dropdown-item" (click)="selectSecondWeek(4)">Week 4</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="behaviorItem row d-flex align-items-center h100" *ngFor="let item of compElem.behaviors;">
+            <div class="hiddenCss" id="behaviorItemId">{{item.id}}</div>
+            <div class="col-9">
+              <div class="behaviorItemText">
+                {{item.name}}
+              </div>
+            </div>
+            <div class="col-3">
+              <div class="behaviorItemResults">
+                <div class="row">
+
+                  <div class="col">
+                    <div class="row">
+                      <div class="arrowDivConst d-flex align-items-center h100">
+                        <img src="../Main//arrow-right.svg" class="arrowRight">
+                      </div>
+                      {{item.scores[1].score}}
+                    </div>
+                  </div>
+
+                  <div class="col">
+                    <div class="row">
+                      <div class="arrowDivUp d-flex align-items-center h100">
+                        <img src="../Main//arrow-right-up.svg" class="arrowRightUp">
+                      </div>
+                      {{item.scores[2].score}}
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </main>
+    <!-- /#page-content-wrapper -->
+  </div>
+</div>
+<!-- /#wrapper -->
