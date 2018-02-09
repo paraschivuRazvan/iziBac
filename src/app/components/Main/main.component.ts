@@ -16,9 +16,139 @@ export class MainComponent implements OnInit {
 
   currentUser = "general";
 
-  studentMenuItems = [{
+  menuToShow = [];
 
-  }]
+  generalMenuItems = [
+    {
+      text: "De ce iziBac",
+      id: "#general_1"
+    },
+
+    {
+      text: "Păreri",
+      id: "#general_2"
+    },
+
+    {
+      text: "Implică-te",
+      id: "#general_3"
+    },
+
+    {
+      text: "Consiliere",
+      id: "#general_4"
+    },
+
+    {
+      text: "Contact",
+      id: "#general_5"
+    },
+  ];
+
+  studentMenuItems = [
+    {
+      text: "De ce iziBac",
+      id: "general_1"
+    },
+    {
+      text: "Functionalitati",
+      id: "general_2"
+    },
+    {
+      text: "Pareri",
+      id: "general_3"
+    },
+    {
+      text: "Media",
+      id: "general_4"
+    },
+    {
+      text: "Implica-te",
+      id: "general_5"
+    },
+    {
+      text: "Parteneri",
+      id: "general_6"
+    },
+    {
+      text: "Consiliere",
+      id: "general_6"
+    },
+    {
+      text: "Contact",
+      id: "general_7"
+    },
+  ];
+
+  profMenuItems = [
+    {
+      text: "De ce iziBac",
+      id: "general_1"
+    },
+    {
+      text: "Functionalitati",
+      id: "general_2"
+    },
+    {
+      text: "Pareri",
+      id: "general_3"
+    },
+    {
+      text: "Media",
+      id: "general_4"
+    },
+    {
+      text: "Implica-te",
+      id: "general_5"
+    },
+    {
+      text: "Parteneri",
+      id: "general_6"
+    },
+    {
+      text: "Consiliere",
+      id: "general_6"
+    },
+    {
+      text: "Contact",
+      id: "general_7"
+    },
+  ];
+
+  parentMenuItems = [
+    {
+      text: "De ce iziBac",
+      id: "general_1"
+    },
+    {
+      text: "Functionalitati",
+      id: "general_2"
+    },
+    {
+      text: "Pareri",
+      id: "general_3"
+    },
+    {
+      text: "Media",
+      id: "general_4"
+    },
+    {
+      text: "Implica-te",
+      id: "general_5"
+    },
+    {
+      text: "Parteneri",
+      id: "general_6"
+    },
+    {
+      text: "Consiliere",
+      id: "general_6"
+    },
+    {
+      text: "Contact",
+      id: "general_7"
+    },
+  ];
 
   setUser(user: string): void {
 
@@ -26,27 +156,27 @@ export class MainComponent implements OnInit {
 
     switch (user) {
       case 'student': {
-
+        this.menuToShow = this.studentMenuItems;
       }
         break;
 
       case 'prof': {
-
+        this.menuToShow = this.profMenuItems;
       }
         break;
 
       case 'parinte': {
-
+        this.menuToShow = this.parentMenuItems;
       }
         break;
 
       default: {
-
+        this.menuToShow = this.generalMenuItems;
       }
         break;
     }
 
-    console.log(this.currentUser)
+    this.ngAfterViewInit();
   }
 
   ngOnInit() {
@@ -70,7 +200,7 @@ export class MainComponent implements OnInit {
       autoplay: true,
       dots: true,
       infinite: true,
-      speed: 500,
+      speed: 1500,
       slidesToShow: 3,
       slidesToScroll: 1,
       responsive: [

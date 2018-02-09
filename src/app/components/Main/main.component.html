@@ -15,7 +15,7 @@
                 <div class="navbar-brand">
                     <span class="navbar-logo">
                         <a href="./main">
-                            <img src="assets/images/logo.png" alt="iziBac" style="height: 3.8rem;">
+                            <img src="assets/images/logowhite.png" alt="iziBac" style="height: 3.8rem;">
                         </a>
                     </span>
                     <!-- <span class="navbar-caption-wrap">
@@ -27,18 +27,20 @@
             </div>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav nav-dropdown" data-app-modern-menu="true">
-                    <li class="nav-item">
-                        <a class="nav-link link text-white display-4" href="https://mobirise.com">
+                    <li class="nav-item" *ngFor="let item of generalMenuItems">
+                        <a class="nav-link link text-white display-4" [attr.href]="item.id">
                             <!-- <span class="mbri-home mbr-iconfont mbr-iconfont-btn"></span> -->
+                            {{item.text}}
+                        </a>
+                    </li>
+
+                    <!-- <li class="nav-item">
+                        <a class="nav-link link text-white display-4" href="https://mobirise.com">
+                            <span class="mbri-home mbr-iconfont mbr-iconfont-btn"></span>
                             Services
                         </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link link text-white display-4" href="https://mobirise.com">
-                            <!-- <span class="mbri-search mbr-iconfont mbr-iconfont-btn"></span> -->
-                            About Us
-                        </a>
-                    </li>
+                    </li> -->
+
                 </ul>
                 <!-- <div class="navbar-buttons mbr-section-btn">
                     <a class="btn btn-sm btn-primary display-4" href="https://mobirise.com">
@@ -51,34 +53,29 @@
     </section>
 
     <!-- INTRO BANNER -->
-    <section class="header1 cid-qHgEjsOnFe mbr-parallax-background" id="header1-1e">
 
-        <div class="container">
+    <section class="cid-qJ9hNQvem1 mbr-fullscreen mbr-parallax-background" id="header2-2b">
+
+        <div class="container align-center">
             <div class="row justify-content-md-center">
                 <div class="mbr-white col-md-10">
-                    <h1 class="mbr-section-title align-center mbr-bold pb-3 mbr-fonts-style display-1">
-                        FULL WIDTH INTRO
-                    </h1>
-                    <h3 class="mbr-section-subtitle align-center mbr-light pb-3 mbr-fonts-style display-2">
-                        Beautiful mobile websites
-                    </h3>
-                    <p class="mbr-text align-center pb-3 mbr-fonts-style display-5">
-                        Full width intro with adjustable height, background image and a color overlay. Click any text to edit or style it.
-                    </p>
-                    <div class="mbr-section-btn align-center">
-                        <a class="btn btn-md btn-primary display-4" href="https://mobirise.com">
-                            <span class="mbr-iconfont mbri-file"></span>LEARN MORE</a>
-                        <a class="btn btn-md btn-white-outline display-4" href="https://mobirise.com">
-                            <span class="mbr-iconfont mbri-idea"></span>LIVE DEMO</a>
-                    </div>
+                    <h1 class="mbr-section-title mbr-bold pb-3 mbr-fonts-style display-1">
+                        IZIBAC</h1>
+
+                    <p class="mbr-text pb-3 mbr-fonts-style display-2">Învățatul poate fi distractiv</p>
+
                 </div>
             </div>
         </div>
-
+        <div class="mbr-arrow hidden-sm-down" aria-hidden="true">
+            <a>
+                <i class="mbri-down mbr-iconfont"></i>
+            </a>
+        </div>
     </section>
 
     <!-- CATEGORY SELECTION -->
-    <section class="features3 cid-qGrSfkByqU" id="features3-l">
+    <!-- <section class="features3 cid-qGrSfkByqU" id="features3-l">
         <div class="container align-center">
             <h2 class="pb-3 mbr-fonts-style mbr-section-title display-2">
                 ALEGE CATEGORIA CU CARE TE IDENTIFICI
@@ -104,9 +101,9 @@
                             </p>
                         </div>
                         <div class="mbr-section-btn text-center">
-                            <a href="https://mobirise.com" class="btn btn-primary display-4">
+                            <span class="btn btn-primary display-4" (click)="setUser('student')">
                                 Student
-                            </a>
+                            </span>
                         </div>
                     </div>
                 </div>
@@ -125,9 +122,9 @@
                             </p>
                         </div>
                         <div class="mbr-section-btn text-center">
-                            <a href="https://mobirise.com" class="btn btn-primary display-4">
+                            <span class="btn btn-primary display-4" (click)="setUser('prof')">
                                 Profesor
-                            </a>
+                            </span>
                         </div>
                     </div>
                 </div>
@@ -146,9 +143,9 @@
                             </p>
                         </div>
                         <div class="mbr-section-btn text-center">
-                            <a href="https://mobirise.com" class="btn btn-primary display-4">
+                            <span class="btn btn-primary display-4" (click)="setUser('parinte')">
                                 Parinte
-                            </a>
+                            </span>
                         </div>
                     </div>
                 </div>
@@ -157,985 +154,890 @@
             </div>
         </div>
 
-    </section>
+    </section> -->
 
-    <!-- CELE TREI SECTIUNI -->
-    <section>
-        <section class="mbr-section content7 cid-qHgEU1wpGI" id="content7-1i">
+    <!-- GENERAL -->
+    <section id="general_1">
+
+        <!-- CELE TREI SECTIUNI -->
+        <section>
+            <!-- VIZIUNE -->
+            <section class="testimonials3 cid-qJ6rcEbrem" id="testimonials3-24">
+
+                <div class="container">
+                    <div class="media-container-row">
+                        <div class="media-content px-3 align-self-center mbr-white py-2">
+                            <p class="mbr-text testimonial-text mbr-fonts-style display-5">
+                                Viziune</p>
+                            <p class="mbr-author-name pt-4 mb-2 mbr-fonts-style display-7">
+                                <span style="font-weight: normal;">În cadrul echipei IziBac, considerăm cu tărie că educația este fundamentul pe care o societate
+                                    este construită. Și credem cu tărie că un viitor luminos poate să fie construit doar
+                                    de tineri care îndrăznesc să viseze, de inovatori și antreprenori, de oameni care își
+                                    urmăresc pasiunile și cărora nu le este teamă să gândească critic. În această viziune,
+                                    educația nu poate să fie decât una liberă, care să scoată la iveală potențialul ascuns
+                                    al fiecărui elev. Nu prin pedepse, ci prin stimulare. Nu prin teme impuse, curriculă
+                                    învechită și mijloace de predare care nu țin cont de schimbarea generațiilor și evoluția
+                                    tehnologică. Ci prin joacă, cea mai naturală expresie a curiozității și ingeniozității
+                                    umane. Aceasta este viziunea noastră în ceea ce privește educația viitorului.</span>
+                            </p>
+                            <p class="mbr-author-desc mbr-fonts-style display-7"></p>
+                        </div>
+
+                        <div class="mbr-figure pl-lg-5" style="width: 105%;">
+                            <img src="assets/images/mbr-1623x1080.jpg" alt="" title="">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- MISIUNE -->
+            <section class="testimonials2 cid-qJ8h5ywBB0" id="testimonials2-25">
+
+                <div class="container">
+                    <div class="media-container-row">
+                        <div class="mbr-figure pr-lg-5" style="width: 130%;">
+                            <img src="assets/images/mbr-1672x1080.jpg" alt="" title="">
+                        </div>
+                        <div class="media-content px-3 align-self-center mbr-white py-2">
+                            <p class="mbr-text testimonial-text mbr-fonts-style display-5">
+                                Misiune</p>
+                            <p class="mbr-author-name pt-4 mb-2 mbr-fonts-style display-7"></p>
+                            <p class="mbr-author-desc mbr-fonts-style display-7">Misiunea IziBac este să redea elevilor de toate vârstele plăcerea cunoașterii printr-o metodă
+                                modernă și distractivă, care îmbină cele mai moderne tehnici de gamificare cu o formă de
+                                predare inovativă, bazată pe multimedia content, interactivitate și spirit de comunitate.
+                                Deoarece credem cu tărie că educația poate fi distractivă.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- PROBLEMA ADRESATA -->
+            <section class="testimonials3 cid-qJ8ibnODpH" id="testimonials3-26">
+
+                <div class="container">
+                    <div class="media-container-row">
+                        <div class="media-content px-3 align-self-center mbr-white py-2">
+                            <p class="mbr-text testimonial-text mbr-fonts-style display-5">
+                                Problema adresată
+                            </p>
+                            <p class="mbr-author-name pt-4 mb-2 mbr-fonts-style display-7"></p>
+                            <p class="mbr-author-desc mbr-fonts-style display-7">
+                                O problemă socială majoră în sistemul educațional din România o reprezintă rata de promovabilitate scăzută la examenul de
+                                Bacalaureat. Elevii se tem de acest examen, iar calitatea standardului educațional este în
+                                cădere liberă. Acestea sunt însă doar două dintre simptomele unei probleme mult mai profunde
+                                – sistemul educațional din România, subfinanțat şi subdezvoltat, nu mai oferă o experiență
+                                de învățare plăcută şi compatibilă cu structura mentală a noilor generaţii, modelată de la
+                                o vârstă fragedă să se bucure de conținut video (prin televiziune și internet) şi aplicaţii
+                                interactive/de tip joc. Lumea se schimbă, tehnologia evoluează și totuși educația în România
+                                se face după aceleași principii din Perioada Revoluției Industriale, de acum 150 de ani.
+                                Curricula este învechită, segmentată și nu facilitează crerea de conexiuni, iar lipsa digitalizării
+                                limitează actul învăţării la o serie rigidă de contexte. Ne propunem să schimbăm acest lucru
+                                şi să redăm plăcerea studiului pentru noile generaţii de elevi, ajutându-i să ia Bacul.</p>
+                        </div>
+
+                        <div class="mbr-figure pl-lg-5" style="width: 100%;">
+                            <img src="assets/images/mbr-1620x1080.jpg" alt="" title="">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </section>
+
+        <!-- TIMELINE -->
+        <section class="timeline2 cid-qJ6mWrPjhw" id="timeline2-21">
+
+            <div class="container align-center">
+                <h2 class="mbr-section-title pb-3 mbr-fonts-style display-2">
+                    POVESTEA NOASTRĂ</h2>
+                <h3 class="mbr-section-subtitle pb-5 mbr-fonts-style display-5">
+                    Povestea iziBac, de la o simplă idee la ceva măreț</h3>
+
+                <div class="container timelines-container" mbri-timelines="">
+                    <div class="row timeline-element reverse separline">
+                        <span class="iconsBackground">
+                            <span class="mbr-iconfont mbri-italic"></span>
+                        </span>
+                        <div class="col-xs-12 col-md-6 align-left">
+                            <div class="timeline-text-content">
+                                <h4 class="mbr-timeline-title pb-3 mbr-fonts-style display-5">
+                                    Începuturi
+                                </h4>
+                                <p class="mbr-timeline-text mbr-fonts-style display-7">
+                                    Povestea IziBac începe cu Raluca Bacinschi Stratulat. Arhitect ca formare dar profesor ca vocație, Raluca a început să predea
+                                    încă din facultate, ajutându-și inițial colegii. Această pasiune pentru a împărtăși cunoaștere
+                                    a fost continuată dupa ce a absolvit Facultatea de Arhitectură, continuând să ajute elevi
+                                    de liceu din anii terminali cu pregătirea pentru examenul de admitere.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row timeline-element  separline">
+                        <span class="iconsBackground">
+                            <span class="mbr-iconfont mbri-idea"></span>
+                        </span>
+                        <div class="col-xs-12 col-md-6 align-left ">
+                            <div class="timeline-text-content">
+                                <h4 class="mbr-timeline-title pb-3 mbr-fonts-style display-5">
+                                    O idee</h4>
+                                <p class="mbr-timeline-text mbr-fonts-style display-7">
+                                    Așa a ajuns să își dea seama nu doar că tinerii se tem de Bacalaureat, dar și că metodele clasice de predare nu fac din studiu
+                                    o activitate plăcută. Și și-a propus să schimbe acest lucru. Pentru acest obiectiv a
+                                    urmat studii în domeniul Antreprenoriatului în educație în cadrul Universității Alternative,
+                                    unde a avut ocazia să cunoscă mulți tineri inovatori, să își perfecționeze viziunea și
+                                    să construiască un plan de succes.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row timeline-element reverse separline">
+                        <span class="iconsBackground">
+                            <span class="mbr-iconfont mbri-share"></span>
+                        </span>
+                        <div class="col-xs-12 col-md-6 align-left">
+                            <div class="timeline-text-content">
+                                <h4 class="mbr-timeline-title pb-3 mbr-fonts-style display-5">Următorul pas</h4>
+                                <p class="mbr-timeline-text mbr-fonts-style display-7">
+                                    Ralucăi i s-a alăturat Adrian Stratulat, soțul ei, care crede cu tărie că doar prin educație poți să faci o lume mai bună
+                                    și așa s-a născut IziBac.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row timeline-element  separline">
+                        <span class="iconsBackground">
+                            <span class="mbr-iconfont mbri-responsive"></span>
+                        </span>
+                        <div class="col-xs-12 col-md-6 align-left ">
+                            <div class="timeline-text-content">
+                                <h4 class="mbr-timeline-title pb-3 mbr-fonts-style display-5">Aplicația ia naștere</h4>
+                                <p class="mbr-timeline-text mbr-fonts-style display-7">La scurt timp, Eduard Lache, un programator pasionat de educație, a crezut suficient în ceea
+                                    ce atunci era doar o idee și au început să lucreze împreună pentru a dezvolta aplicația
+                                    IziBac.
+                                    <br>Ideea a fost selectată în cadrul incubatorului Social Impact Awards (competiție pe care
+                                    a și câstigat-o cu prototipul), unde a continuat dezvoltarea și maturizarea.&nbsp;</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row timeline-element reverse">
+                        <span class="iconsBackground">
+                            <span class="mbr-iconfont mbri-growing-chart"></span>
+                        </span>
+                        <div class="col-xs-12 col-md-6 align-left">
+                            <div class="timeline-text-content">
+                                <h4 class="mbr-timeline-title pb-3 mbr-fonts-style display-5">Echipa crește</h4>
+                                <p class="mbr-timeline-text mbr-fonts-style display-7">
+                                    Acum echipa numără 5 persoane, Laurențiu și Răzvan completând cu abilitățile lor tehnice și creative viziunea inițială a
+                                    proiectului. Și de asemenea, ne bucură enorm că din ce în ce mai mulți profesori aleg
+                                    să ne ajute cu oferirea de material educațional pentru inserarea în aplicație, coagulând
+                                    încet o comunitate care crede că educația din România poate fi și altfel.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- MOTIVATION -->
+        <section class="mbr-section info3 cid-qJ8kLvMYEq mbr-parallax-background" id="info3-27">
+
+            <div class="mbr-overlay" style="opacity: 0.4; background-color: rgb(35, 35, 35);">
+            </div>
+
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="media-container-column title col-12 col-md-10">
+
+                        <h3 class="mbr-section-subtitle align-left mbr-light mbr-white pb-3 mbr-fonts-style display-5">"Majoritatea eșecurilor din viață sunt ale oamenilor care nu-și dau seama cât de aproape sunt de
+                            succes atunci cand renunță"</h3>
+                        <p class="mbr-text align-left mbr-white mbr-fonts-style display-7">
+                            Thomas Edison</p>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- OPINIILE UTILIZATORILOR -->
+        <section class="testimonials1 cid-qHgF1FDQZj" id="general_2">
 
             <div class="container">
                 <div class="media-container-row">
-                    <div class="col-12 col-md-8">
-                        <div class="media-container-row">
-                            <div class="media-content">
-                                <div class="mbr-section-text">
-                                    <p class="mbr-text align-right mb-0 mbr-fonts-style display-7">
-                                        <strong>Make your own website in a few clicks!</strong> Mobirise helps you cut down development
-                                        time by providing you with a flexible website editor with a drag and drop interface.
-                                        Mobirise Website Builder creates responsive, retina and
-                                        <em>mobile friendly websites</em> in a few clicks. Mobirise is one of the easiest website
-                                        development tools available today.
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="mbr-figure" style="width: 60%;">
-                                <img src="assets/images/01.jpg" alt="Mobirise">
-                            </div>
-                        </div>
+                    <div class="title col-12 align-center">
+                        <h2 class="pb-3 mbr-fonts-style display-2">
+                            OPINIILE UTILIZATORILOR
+                        </h2>
+                        <h3 class="mbr-section-subtitle mbr-light pb-3 mbr-fonts-style display-5">
+                            Ce spun studenții, profesorii și părinții despre aplicație
+                        </h3>
                     </div>
                 </div>
             </div>
 
+            <section class="slider">
+
+                <div class="mbr-testimonial p-3 align-center col-12 col-md-6 col-lg-4">
+                    <div class="panel-item p-3">
+                        <div class="card-block">
+                            <div class="testimonial-photo">
+                                <img src="assets/images/pareri/luca.jpg">
+                            </div>
+                            <p class="mbr-text mbr-fonts-style display-7">
+                                "Îţi dă oportunitatea de a vedea în ce relaţie eşti cu colegii tăi şi de la cine ai putea să ceri ajutor pe viitor, de la
+                                ce colegi ai putea să înveţi mai multe. Cred că ne ajută mai mult pe partea asta de cooperare
+                                decât pe partea de competitivitate."
+                            </p>
+                        </div>
+                        <div class="card-footer">
+                            <div class="mbr-author-name mbr-bold mbr-fonts-style display-7">
+                                Luca Stirbat
+                            </div>
+                            <small class="mbr-author-desc mbr-italic mbr-light mbr-fonts-style display-7">
+                                București
+                            </small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mbr-testimonial p-3 align-center col-12 col-md-6 col-lg-4">
+                    <div class="panel-item p-3">
+                        <div class="card-block">
+                            <div class="testimonial-photo">
+                                <img src="assets/images/pareri/bianca.jpg">
+                            </div>
+                            <p class="mbr-text mbr-fonts-style display-7">
+                                "Voiam doar să intru să fac câteva întrebări şi am descoperit că fără să vreau continui şi continui să fac. Îmi place ideea
+                                de a te juca și învața în același timp."
+                            </p>
+                        </div>
+                        <div class="card-footer">
+                            <div class="mbr-author-name mbr-bold mbr-fonts-style display-7">
+                                Bianca Ionescu
+                            </div>
+                            <small class="mbr-author-desc mbr-italic mbr-light mbr-fonts-style display-7">
+                                Curtea de Argeș
+                            </small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mbr-testimonial p-3 align-center col-12 col-md-6 col-lg-4">
+                    <div class="panel-item p-3">
+                        <div class="card-block">
+                            <div class="testimonial-photo">
+                                <img src="assets/images/pareri/gabriel.jpg">
+                            </div>
+                            <p class="mbr-text mbr-fonts-style display-7">
+                                "M-am bucurat mult să văd că încep să apară astfel de aplicații pe piața din România. Acum 11 ani, când am dat eu bac-ul,
+                                aveam doar hârtie și pix iar profesorii nu erau atât de cool precum cei care deja au creat
+                                întrebări pentru aplicația iziBac."
+                            </p>
+                        </div>
+                        <div class="card-footer">
+                            <div class="mbr-author-name mbr-bold mbr-fonts-style display-7">
+                                Gabriel Diaconescu
+                            </div>
+                            <small class="mbr-author-desc mbr-italic mbr-light mbr-fonts-style display-7">
+                                Craiova
+                            </small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mbr-testimonial p-3 align-center col-12 col-md-6 col-lg-4">
+                    <div class="panel-item p-3">
+                        <div class="card-block">
+                            <div class="testimonial-photo">
+                                <img src="assets/images/pareri/calin.jpg">
+                            </div>
+                            <p class="mbr-text mbr-fonts-style display-7">
+                                „Când am început să o folosesc, am vrut să văd dacă pot învăţa din ea. Pe parcurs, curiozitatea asta de învăţare deja a devenit
+                                autonomă şi mai mult mă jucam ca să mă joc. Adică învăţam fără să fiu conştient de asta.”
+                            </p>
+                        </div>
+                        <div class="card-footer">
+                            <div class="mbr-author-name mbr-bold mbr-fonts-style display-7">
+                                Călin Ungureanu
+                            </div>
+                            <small class="mbr-author-desc mbr-italic mbr-light mbr-fonts-style display-7">
+                                București
+                            </small>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
         </section>
 
-        <section class="mbr-section content6 cid-qHgEUC8s8j" id="content6-1j">
-
-
+        <!-- APARITII MEDIA -->
+        <section class="features17 cid-qHgF7pZ5hs" id="features17-1m">
 
             <div class="container">
                 <div class="media-container-row">
-                    <div class="col-12 col-md-8">
-                        <div class="media-container-row">
-                            <div class="mbr-figure" style="width: 60%;">
-                                <img src="assets/images/01.jpg" alt="Mobirise">
-                            </div>
-                            <div class="media-content">
-                                <div class="mbr-section-text">
-                                    <p class="mbr-text mb-0 mbr-fonts-style display-7">
-                                        <strong>Make your own website in a few clicks!</strong> Mobirise helps you cut down development
-                                        time by providing you with a flexible website editor with a drag and drop interface.
-                                        Mobirise Website Builder creates responsive, retina and
-                                        <em>mobile friendly websites</em> in a few clicks. Mobirise is one of the easiest website
-                                        development tools available today.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="title col-12 align-center">
+                        <h2 class="pb-3 mbr-fonts-style display-2">
+                            APARIȚII MEDIA
+                        </h2>
                     </div>
                 </div>
             </div>
-        </section>
 
-        <section class="mbr-section content7 cid-qHgEVhRuTe" id="content7-1k">
-
-
-
-            <div class="container">
+            <div class="container-fluid">
                 <div class="media-container-row">
-                    <div class="col-12 col-md-8">
-                        <div class="media-container-row">
-                            <div class="media-content">
-                                <div class="mbr-section-text">
-                                    <p class="mbr-text align-right mb-0 mbr-fonts-style display-7">
-                                        <strong>Make your own website in a few clicks!</strong> Mobirise helps you cut down development
-                                        time by providing you with a flexible website editor with a drag and drop interface.
-                                        Mobirise Website Builder creates responsive, retina and
-                                        <em>mobile friendly websites</em> in a few clicks. Mobirise is one of the easiest website
-                                        development tools available today.
-                                    </p>
-                                </div>
+                    <div class="card p-3 col-12 col-md-6 col-lg-2">
+                        <div class="card-wrapper">
+                            <div class="card-img">
+                                <a href="https://republica.ro/aplicatia-care-te-ajuta-sa-iei-10-la-bac-generatia-b">
+                                    <img src="assets/images/media/republica.jpg" alt="republica">
+                                </a>
                             </div>
-                            <div class="mbr-figure" style="width: 60%;">
-                                <img src="assets/images/01.jpg" alt="Mobirise">
+                            <div class="card-box">
+                                <h4 class="card-title pb-3 mbr-fonts-style display-7">
+                                    Republica - Aplicația care te ajută să iei 10 la Bac. GENERAȚIA B
+                                </h4>
                             </div>
                         </div>
                     </div>
+
+                    <div class="card p-3 col-12 col-md-6 col-lg-2">
+                        <div class="card-wrapper">
+                            <div class="card-img">
+                                <a href="https://www.digi24.ro/stiri/sci-tech/lumea-digitala/aplicatia-care-te-ajuta-sa-iei-bacalaureatul-819167" target="_blank">
+                                    <img src="assets/images/media/digi.png" alt="digi24">
+                                </a>
+                            </div>
+                            <div class="card-box">
+                                <h4 class="card-title pb-3 mbr-fonts-style display-7">
+                                    Digi24 - Aplicația care te ajută să iei Bacalaureatul
+                                </h4>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card p-3 col-12 col-md-6 col-lg-2">
+                        <div class="card-wrapper">
+                            <div class="card-img">
+                                <a href="http://www.romania-actualitati.ro/izibac_la_rra-109244">
+                                    <img src="assets/images/media/rra.jpg" alt="romania-actualitati">
+                                </a>
+                            </div>
+                            <div class="card-box">
+                                <h4 class="card-title pb-3 mbr-fonts-style display-7">
+                                    Radio Romania Actualități - IZIBAC la RRA
+                                </h4>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card p-3 col-12 col-md-6 col-lg-2">
+                        <div class="card-wrapper">
+                            <div class="card-img">
+                                <a href="https://pentruprieteni.com/aplicatii/aplicatia-care-te-ajuta-sa-iei-bac-ul-cu-10-se-apropie-de-lansare-atentie-liceeni-si-profesori/">
+                                    <img src="assets/images/media/pp.png" alt="pentruprieteni">
+                                </a>
+                            </div>
+                            <div class="card-box">
+                                <h4 class="card-title pb-3 mbr-fonts-style display-7">
+                                    Pentru Prieteni - Aplicația care te ajută să iei BAC-ul cu 10 se apropie de lansare
+                                </h4>
+
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </section>
-    </section>
 
-    <!-- OPINIILE UTILIZATORILOR -->
-    <section class="testimonials1 cid-qHgF1FDQZj" id="testimonials1-1l">
-
-        <div class="container">
-            <div class="media-container-row">
-                <div class="title col-12 align-center">
-                    <h2 class="pb-3 mbr-fonts-style display-2">
-                        OPINIILE UTILIZATORILOR
-                    </h2>
-                    <h3 class="mbr-section-subtitle mbr-light pb-3 mbr-fonts-style display-5">
-                        Ce spun studentii, profesorii si parintii despre aplicatie
-                    </h3>
-                </div>
-            </div>
-        </div>
-
-        <section class="slider">
-
-            <div class="mbr-testimonial p-3 align-center col-12 col-md-6 col-lg-4">
-                <div class="panel-item p-3">
-                    <div class="card-block">
-                        <div class="testimonial-photo">
-                            <img src="assets/images/face1.jpg">
-                        </div>
-                        <p class="mbr-text mbr-fonts-style display-7">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, aspernatur, voluptatibus, atque, tempore molestiae.
-                        </p>
-                    </div>
-                    <div class="card-footer">
-                        <div class="mbr-author-name mbr-bold mbr-fonts-style display-7">
-                            John Smith
-                        </div>
-                        <small class="mbr-author-desc mbr-italic mbr-light mbr-fonts-style display-7">
-                            Developer
-                        </small>
-                    </div>
-                </div>
-            </div>
-
-            <div class="mbr-testimonial p-3 align-center col-12 col-md-6 col-lg-4">
-                <div class="panel-item p-3">
-                    <div class="card-block">
-                        <div class="testimonial-photo">
-                            <img src="assets/images/face1.jpg">
-                        </div>
-                        <p class="mbr-text mbr-fonts-style display-7">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, aspernatur, voluptatibus, atque, tempore molestiae.
-                        </p>
-                    </div>
-                    <div class="card-footer">
-                        <div class="mbr-author-name mbr-bold mbr-fonts-style display-7">
-                            John Smith
-                        </div>
-                        <small class="mbr-author-desc mbr-italic mbr-light mbr-fonts-style display-7">
-                            Developer
-                        </small>
-                    </div>
-                </div>
-            </div>
-
-            <div class="mbr-testimonial p-3 align-center col-12 col-md-6 col-lg-4">
-                <div class="panel-item p-3">
-                    <div class="card-block">
-                        <div class="testimonial-photo">
-                            <img src="assets/images/face1.jpg">
-                        </div>
-                        <p class="mbr-text mbr-fonts-style display-7">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, aspernatur, voluptatibus, atque, tempore molestiae.
-                        </p>
-                    </div>
-                    <div class="card-footer">
-                        <div class="mbr-author-name mbr-bold mbr-fonts-style display-7">
-                            John Smith
-                        </div>
-                        <small class="mbr-author-desc mbr-italic mbr-light mbr-fonts-style display-7">
-                            Developer
-                        </small>
-                    </div>
-                </div>
-            </div>
-
-            <div class="mbr-testimonial p-3 align-center col-12 col-md-6 col-lg-4">
-                <div class="panel-item p-3">
-                    <div class="card-block">
-                        <div class="testimonial-photo">
-                            <img src="assets/images/face1.jpg">
-                        </div>
-                        <p class="mbr-text mbr-fonts-style display-7">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, aspernatur, voluptatibus, atque, tempore molestiae.
-                        </p>
-                    </div>
-                    <div class="card-footer">
-                        <div class="mbr-author-name mbr-bold mbr-fonts-style display-7">
-                            John Smith
-                        </div>
-                        <small class="mbr-author-desc mbr-italic mbr-light mbr-fonts-style display-7">
-                            Developer
-                        </small>
-                    </div>
-                </div>
-            </div>
-
-            <div class="mbr-testimonial p-3 align-center col-12 col-md-6 col-lg-4">
-                <div class="panel-item p-3">
-                    <div class="card-block">
-                        <div class="testimonial-photo">
-                            <img src="assets/images/face1.jpg">
-                        </div>
-                        <p class="mbr-text mbr-fonts-style display-7">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, aspernatur, voluptatibus, atque, tempore molestiae.
-                        </p>
-                    </div>
-                    <div class="card-footer">
-                        <div class="mbr-author-name mbr-bold mbr-fonts-style display-7">
-                            John Smith
-                        </div>
-                        <small class="mbr-author-desc mbr-italic mbr-light mbr-fonts-style display-7">
-                            Developer
-                        </small>
-                    </div>
-                </div>
-            </div>
-
-            <div class="mbr-testimonial p-3 align-center col-12 col-md-6 col-lg-4">
-                <div class="panel-item p-3">
-                    <div class="card-block">
-                        <div class="testimonial-photo">
-                            <img src="assets/images/face1.jpg">
-                        </div>
-                        <p class="mbr-text mbr-fonts-style display-7">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, aspernatur, voluptatibus, atque, tempore molestiae.
-                        </p>
-                    </div>
-                    <div class="card-footer">
-                        <div class="mbr-author-name mbr-bold mbr-fonts-style display-7">
-                            John Smith
-                        </div>
-                        <small class="mbr-author-desc mbr-italic mbr-light mbr-fonts-style display-7">
-                            Developer
-                        </small>
-                    </div>
-                </div>
-            </div>
-
-            <div class="mbr-testimonial p-3 align-center col-12 col-md-6 col-lg-4">
-                <div class="panel-item p-3">
-                    <div class="card-block">
-                        <div class="testimonial-photo">
-                            <img src="assets/images/face1.jpg">
-                        </div>
-                        <p class="mbr-text mbr-fonts-style display-7">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, aspernatur, voluptatibus, atque, tempore molestiae.
-                        </p>
-                    </div>
-                    <div class="card-footer">
-                        <div class="mbr-author-name mbr-bold mbr-fonts-style display-7">
-                            John Smith
-                        </div>
-                        <small class="mbr-author-desc mbr-italic mbr-light mbr-fonts-style display-7">
-                            Developer
-                        </small>
-                    </div>
-                </div>
-            </div>
-
-            <div class="mbr-testimonial p-3 align-center col-12 col-md-6 col-lg-4">
-                <div class="panel-item p-3">
-                    <div class="card-block">
-                        <div class="testimonial-photo">
-                            <img src="assets/images/face1.jpg">
-                        </div>
-                        <p class="mbr-text mbr-fonts-style display-7">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, aspernatur, voluptatibus, atque, tempore molestiae.
-                        </p>
-                    </div>
-                    <div class="card-footer">
-                        <div class="mbr-author-name mbr-bold mbr-fonts-style display-7">
-                            John Smith
-                        </div>
-                        <small class="mbr-author-desc mbr-italic mbr-light mbr-fonts-style display-7">
-                            Developer
-                        </small>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </section>
-
-    <!-- APARITII MEDIA -->
-    <section class="features17 cid-qHgF7pZ5hs" id="features17-1m">
-
-        <div class="container-fluid">
-            <div class="media-container-row">
-                <div class="card p-3 col-12 col-md-6 col-lg-2">
-                    <div class="card-wrapper">
-                        <div class="card-img">
-                            <img src="assets/images/01.jpg" alt="Mobirise">
-                        </div>
-                        <div class="card-box">
-                            <h4 class="card-title pb-3 mbr-fonts-style display-7">
-                                No Coding
-                            </h4>
-                            <p class="mbr-text mbr-fonts-style display-7">
-                                Mobirise is an easy website builder - just drop site elements to your page, add content and style it to look the way you
-                                like.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="card p-3 col-12 col-md-6 col-lg-2">
-                    <div class="card-wrapper">
-                        <div class="card-img">
-                            <img src="assets/images/02.jpg" alt="Mobirise">
-                        </div>
-                        <div class="card-box">
-                            <h4 class="card-title pb-3 mbr-fonts-style display-7">
-                                Mobile Friendly
-                            </h4>
-                            <p class="mbr-text mbr-fonts-style display-7">
-                                All sites you make with Mobirise are mobile-friendly. You don't have to create a special mobile version of your site.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="card p-3 col-12 col-md-6 col-lg-2">
-                    <div class="card-wrapper">
-                        <div class="card-img">
-                            <img src="assets/images/03.jpg" alt="Mobirise">
-                        </div>
-                        <div class="card-box">
-                            <h4 class="card-title pb-3 mbr-fonts-style display-7">
-                                Unique Styles
-                            </h4>
-                            <p class="mbr-text mbr-fonts-style display-7">
-                                Mobirise offers many site blocks in several themes, and though these blocks are pre-made, they are flexible.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="card p-3 col-12 col-md-6 col-lg-2">
-                    <div class="card-wrapper">
-                        <div class="card-img">
-                            <img src="assets/images/04.jpg" alt="Mobirise">
-                        </div>
-                        <div class="card-box">
-                            <h4 class="card-title pb-3 mbr-fonts-style display-7">
-                                Unlimited Sites
-                            </h4>
-                            <p class="mbr-text mbr-fonts-style display-7">
-                                Mobirise gives you the freedom to develop as many websites as you like given the fact that it is a desktop app.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="card p-3 col-12 col-md-6 col-lg-2">
-                    <div class="card-wrapper">
-                        <div class="card-img">
-                            <img src="assets/images/01.jpg" alt="Mobirise">
-                        </div>
-                        <div class="card-box">
-                            <h4 class="card-title pb-3 mbr-fonts-style display-7">
-                                No Coding
-                            </h4>
-                            <p class="mbr-text mbr-fonts-style display-7">
-                                Mobirise is an easy website builder - just drop site elements to your page, add content and style it to look the way you
-                                like.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="card p-3 col-12 col-md-6 col-lg-2">
-                    <div class="card-wrapper">
-                        <div class="card-img">
-                            <img src="assets/images/02.jpg" alt="Mobirise">
-                        </div>
-                        <div class="card-box">
-                            <h4 class="card-title pb-3 mbr-fonts-style display-7">
-                                Mobile Friendly
-                            </h4>
-                            <p class="mbr-text mbr-fonts-style display-7">
-                                All sites you make with Mobirise are mobile-friendly. You don't have to create a special mobile version of your site.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- GALLERY -->
-    <section class="mbr-gallery mbr-slider-carousel cid-qGQ8gxkZr9" id="gallery3-15">
-
-        <div>
-            <div>
-                <!-- Filter -->
-                <!-- Gallery -->
-                <div class="mbr-gallery-row">
-                    <div class="mbr-gallery-layout-default">
-                        <div>
-                            <div>
-                                <div class="mbr-gallery-item mbr-gallery-item--pNaN" data-video-url="false" data-tags="Awesome">
-                                    <div href="#lb-gallery3-15" data-slide-to="0" data-toggle="modal">
-                                        <img src="assets/images/gallery00.jpg" alt="">
-                                        <!-- <span class="icon-focus"></span> -->
-                                    </div>
-                                </div>
-                                <div class="mbr-gallery-item mbr-gallery-item--pNaN" data-video-url="false" data-tags="Responsive">
-                                    <div href="#lb-gallery3-15" data-slide-to="1" data-toggle="modal">
-                                        <img src="assets/images/gallery01.jpg" alt="">
-                                        <!-- <span class="icon-focus"></span> -->
-                                    </div>
-                                </div>
-                                <div class="mbr-gallery-item mbr-gallery-item--pNaN" data-video-url="false" data-tags="Creative">
-                                    <div href="#lb-gallery3-15" data-slide-to="2" data-toggle="modal">
-                                        <img src="assets/images/gallery02.jpg" alt="">
-                                        <!-- <span class="icon-focus"></span> -->
-                                    </div>
-                                </div>
-                                <div class="mbr-gallery-item mbr-gallery-item--pNaN" data-video-url="false" data-tags="Animated">
-                                    <div href="#lb-gallery3-15" data-slide-to="3" data-toggle="modal">
-                                        <img src="assets/images/gallery03.jpg" alt="">
-                                        <!-- <span class="icon-focus"></span> -->
-                                    </div>
-                                </div>
-                                <div class="mbr-gallery-item mbr-gallery-item--pNaN" data-video-url="false" data-tags="Awesome">
-                                    <div href="#lb-gallery3-15" data-slide-to="4" data-toggle="modal">
-                                        <img src="assets/images/gallery04.jpg" alt="">
-                                        <!-- <span class="icon-focus"></span> -->
-                                    </div>
-                                </div>
-                                <div class="mbr-gallery-item mbr-gallery-item--pNaN" data-video-url="false" data-tags="Awesome">
-                                    <div href="#lb-gallery3-15" data-slide-to="5" data-toggle="modal">
-                                        <img src="assets/images/gallery05.jpg" alt="">
-                                        <!-- <span class="icon-focus"></span> -->
-                                    </div>
-                                </div>
-                                <div class="mbr-gallery-item mbr-gallery-item--pNaN" data-video-url="false" data-tags="Responsive">
-                                    <div href="#lb-gallery3-15" data-slide-to="6" data-toggle="modal">
-                                        <img src="assets/images/gallery06.jpg" alt="">
-                                        <!-- <span class="icon-focus"></span> -->
-                                    </div>
-                                </div>
-                                <div class="mbr-gallery-item mbr-gallery-item--pNaN" data-video-url="false" data-tags="Animated">
-                                    <div href="#lb-gallery3-15" data-slide-to="7" data-toggle="modal">
-                                        <img src="assets/images/gallery07.jpg" alt="">
-                                        <!-- <span class="icon-focus"></span> -->
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="clearfix"></div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-
-    </section>
-
-    <!-- CUM TE IMPLICI -->
-    <section class="features8 cid-qHgFrFlmpN mbr-parallax-background" id="features8-1o">
-
-        <div class="mbr-overlay" style="opacity: 0.2; background-color: rgb(35, 35, 35);">
-        </div>
-
-        <div class="container">
-            <div class="media-container-row">
-
-                <div class="card  col-12 col-md-6 col-lg-4">
-                    <div class="card-img">
-                        <span class="mbri-desktop mbr-iconfont"></span>
-                    </div>
-                    <div class="card-box align-center">
-                        <h4 class="card-title mbr-fonts-style display-7">
-                            Unlimited Sites
-                        </h4>
-                        <p class="mbr-text mbr-fonts-style display-7">
-                            Mobirise gives you the freedom to develop as many websites as you like given the fact that it is a desktop app.
-                        </p>
-                        <div class="mbr-section-btn text-center">
-                            <a href="https://mobirise.com" class="btn btn-secondary display-4">
-                                More
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="card  col-12 col-md-6 col-lg-4">
-                    <div class="card-img">
-                        <span class="mbri-touch mbr-iconfont"></span>
-                    </div>
-                    <div class="card-box align-center">
-                        <h4 class="card-title mbr-fonts-style display-7">
-                            Mobile Friendly
-                        </h4>
-                        <p class="mbr-text mbr-fonts-style display-7">
-                            All sites you make with Mobirise are mobile-friendly. You don't have to create a special mobile version of your site.
-                        </p>
-                        <div class="mbr-section-btn text-center">
-                            <a href="https://mobirise.com" class="btn btn-secondary display-4">
-                                More
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="card  col-12 col-md-6 col-lg-4">
-                    <div class="card-img">
-                        <span class="mbri-responsive mbr-iconfont"></span>
-                    </div>
-                    <div class="card-box align-center">
-                        <h4 class="card-title mbr-fonts-style display-7">
-                            Unique Styles
-                        </h4>
-                        <p class="mbr-text mbr-fonts-style display-7">
-                            Mobirise offers many site blocks in several themes, and though these blocks are pre-made, they are flexible.
-                        </p>
-                        <div class="mbr-section-btn text-center">
-                            <a href="https://mobirise.com" class="btn btn-secondary display-4">
-                                More
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-
-            </div>
-        </div>
-    </section>
-
-    <!-- PARTENERI -->
-    <section class="mbr-gallery mbr-slider-carousel cid-qHgBGoPn9k" id="gallery1-16">
-
-        <div class="container align-center">
+        <!-- CUM TE IMPLICI -->
+        <div class="container align-center" id="general_3">
             <h2 class="pb-3 mbr-fonts-style mbr-section-title display-2">
-                PARTENERI
+                DOREȘTI SĂ TE IMPLICI?
             </h2>
             <h3 class="pb-5 mbr-section-subtitle mbr-fonts-style mbr-light display-5">
-                Partenerii care ne ajuta si sustin viitorul Romaniei
+                Echipa iziBac are nevoie de ajutorul tău.
             </h3>
         </div>
 
-        <div class="container">
-            <div>
-                <!-- Filter -->
-                <!-- Gallery -->
-                <div class="mbr-gallery-row">
-                    <div class="mbr-gallery-layout-default">
-                        <div>
+
+        <section class="features8 cid-qHgFrFlmpN mbr-parallax-background" id="features8-1o">
+
+            <div class="mbr-overlay" style="opacity: 0.2; background-color: rgb(35, 35, 35);">
+            </div>
+
+            <div class="container">
+                <div class="media-container-row">
+
+                    <div class="card col-12 col-md-6 col-lg-4">
+                        <div class="card-img">
+                            <span class="mbri-star mbr-iconfont"></span>
+                        </div>
+                        <div class="card-box align-center">
+                            <h4 class="card-title mbr-fonts-style display-7">
+                                Recomandări
+                            </h4>
+                            <p class="mbr-text mbr-fonts-style display-7">
+                                Ne poți ajuta recomandându-ne cadre didactice care ne împărtășesc pasiunea pentru o educație modernă, digitală și gamificată.
+                                Căutăm colaboratori educaționali pentru a extinde baza de date a jocului. Ajută-ne să schimbăm
+                                educația din România împreună. </p>
+                            <!-- <div class="mbr-section-btn text-center">
+                                <a href="https://mobirise.com" class="btn btn-secondary display-4">
+                                    More
+                                </a>
+                            </div> -->
+                        </div>
+                    </div>
+
+                    <div class="card col-12 col-md-6 col-lg-4">
+                        <div class="card-img">
+                            <span class="mbri-cash mbr-iconfont"></span>
+                        </div>
+                        <div class="card-box align-center">
+                            <h4 class="card-title mbr-fonts-style display-7">
+                                Donații
+                            </h4>
+                            <p class="mbr-text mbr-fonts-style display-7">
+                                IziBac este un proiect ambițios, a cărui dezvoltare necesită multe resurse. Ne poți sprijini direct prin donații către echipa
+                                de dezvoltare, atât prin card, PayPal sau Bitcoin. </p>
+                            <div class="mbr-section-btn text-center">
+                                <a class="btn btn-secondary display-4">
+                                    Donează
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- PARTENERI -->
+        <section class="mbr-gallery mbr-slider-carousel cid-qHgBGoPn9k" id="gallery1-16">
+
+            <div class="container align-center">
+                <h2 class="pb-3 mbr-fonts-style mbr-section-title display-2">
+                    PARTENERI
+                </h2>
+                <h3 class="pb-5 mbr-section-subtitle mbr-fonts-style mbr-light display-5">
+                    Partenerii care ne ajută și susțin viitorul României
+                </h3>
+            </div>
+
+            <div class="container">
+                <div>
+                    <!-- Filter -->
+                    <!-- Gallery -->
+                    <div class="mbr-gallery-row">
+                        <div class="mbr-gallery-layout-default">
                             <div>
-                                <div class="mbr-gallery-item mbr-gallery-item--p1" data-tags="Awesome">
-                                    <div href="#lb-gallery1-16" data-slide-to="0">
-                                        <img src="assets/images/parteneri/ua.png" alt="">
-                                        <!-- <span class="icon-focus"></span> -->
-                                        <!-- <span class="mbr-gallery-title mbr-fonts-style display-7">Type caption here</span> -->
+                                <div>
+                                    <div class="mbr-gallery-item mbr-gallery-item--p1" data-tags="Awesome">
+                                        <div href="#lb-gallery1-16" data-slide-to="0">
+                                            <img src="assets/images/parteneri/ua.png" alt="">
+                                            <!-- <span class="icon-focus"></span> -->
+                                            <!-- <span class="mbr-gallery-title mbr-fonts-style display-7">Type caption here</span> -->
+                                        </div>
+                                    </div>
+                                    <div class="mbr-gallery-item mbr-gallery-item--p1" data-tags="Creative">
+                                        <div href="#lb-gallery1-16" data-slide-to="2">
+                                            <img src="assets/images/parteneri/learnity.png" alt="">
+                                            <!-- <span class="icon-focus"></span> -->
+                                            <!-- <span class="mbr-gallery-title mbr-fonts-style display-7">Type caption here</span> -->
+                                        </div>
+                                    </div>
+                                    <div class="mbr-gallery-item mbr-gallery-item--p1" data-tags="Responsive">
+                                        <div href="#lb-gallery1-16" data-slide-to="1">
+                                            <img src="assets/images/parteneri/educativa.png" alt="">
+                                            <!-- <span class="icon-focus"></span> -->
+                                            <!-- <span class="mbr-gallery-title mbr-fonts-style display-7">Type caption here</span> -->
+                                        </div>
+                                    </div>
+                                    <div class="mbr-gallery-item mbr-gallery-item--p1" data-tags="Responsive">
+                                        <div href="#lb-gallery1-16" data-slide-to="1">
+                                            <img src="assets/images/parteneri/playfulSolutions.png" alt="">
+                                            <!-- <span class="icon-focus"></span> -->
+                                            <!-- <span class="mbr-gallery-title mbr-fonts-style display-7">Type caption here</span> -->
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="mbr-gallery-item mbr-gallery-item--p1" data-tags="Responsive">
-                                    <div href="#lb-gallery1-16" data-slide-to="1">
-                                        <img src="assets/images/parteneri/educativa.png" alt="">
-                                        <!-- <span class="icon-focus"></span> -->
-                                        <!-- <span class="mbr-gallery-title mbr-fonts-style display-7">Type caption here</span> -->
-                                    </div>
-                                </div>
-                                <div class="mbr-gallery-item mbr-gallery-item--p1" data-tags="Creative">
-                                    <div href="#lb-gallery1-16" data-slide-to="2">
-                                        <img src="assets/images/parteneri/learnity.png" alt="">
-                                        <!-- <span class="icon-focus"></span> -->
-                                        <!-- <span class="mbr-gallery-title mbr-fonts-style display-7">Type caption here</span> -->
-                                    </div>
-                                </div>
-                                <div class="mbr-gallery-item mbr-gallery-item--p1" data-tags="Animated">
-                                    <div href="#lb-gallery1-16" data-slide-to="3">
-                                        <img src="assets/images/parteneri/llia.png" alt="">
-                                        <!-- <span class="icon-focus"></span> -->
-                                        <!-- <span class="mbr-gallery-title mbr-fonts-style display-7">Type caption here</span> -->
-                                    </div>
-                                </div>
-                                <!-- <div class="mbr-gallery-item mbr-gallery-item--p1" data-video-url="false" data-tags="Awesome">
-                                    <div href="#lb-gallery1-16" data-slide-to="4" data-toggle="modal">
-                                        <img src="assets/images/gallery04.jpg" alt="">
-                                        <span class="icon-focus"></span>
-                                        <span class="mbr-gallery-title mbr-fonts-style display-7">Type caption here</span>
-                                    </div>
-                                </div>
-                                <div class="mbr-gallery-item mbr-gallery-item--p1" data-video-url="false" data-tags="Awesome">
-                                    <div href="#lb-gallery1-16" data-slide-to="5" data-toggle="modal">
-                                        <img src="assets/images/gallery05.jpg" alt="">
-                                        <span class="icon-focus"></span>
-                                        <span class="mbr-gallery-title mbr-fonts-style display-7">Type caption here</span>
-                                    </div>
-                                </div>
-                                <div class="mbr-gallery-item mbr-gallery-item--p1" data-video-url="false" data-tags="Responsive">
-                                    <div href="#lb-gallery1-16" data-slide-to="6" data-toggle="modal">
-                                        <img src="assets/images/gallery06.jpg" alt="">
-                                        <span class="icon-focus"></span>
-                                        <span class="mbr-gallery-title mbr-fonts-style display-7">Type caption here</span>
-                                    </div>
-                                </div>
-                                <div class="mbr-gallery-item mbr-gallery-item--p1" data-video-url="false" data-tags="Animated">
-                                    <div href="#lb-gallery1-16" data-slide-to="7" data-toggle="modal">
-                                        <img src="assets/images/gallery07.jpg" alt="">
-                                        <span class="icon-focus"></span>
-                                        <span class="mbr-gallery-title mbr-fonts-style display-7">Type caption here</span>
-                                    </div>
-                                </div> -->
                             </div>
+                            <div class="clearfix"></div>
                         </div>
-                        <div class="clearfix"></div>
                     </div>
-                </div>
-                <!-- Lightbox -->
-                <div data-app-prevent-settings="" class="mbr-slider modal fade carousel slide" tabindex="-1" data-keyboard="true" data-interval="false"
-                    id="lb-gallery1-16">
-                    <div class="modal-dialog">
-                        <div class="modal-content">
-                            <div class="modal-body">
-                                <div class="carousel-inner">
-                                    <div class="carousel-item active">
-                                        <img src="assets/images/gallery00.jpg" alt="">
+                    <!-- Lightbox -->
+                    <div data-app-prevent-settings="" class="mbr-slider modal fade carousel slide" tabindex="-1" data-keyboard="true" data-interval="false"
+                        id="lb-gallery1-16">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-body">
+                                    <div class="carousel-inner">
+                                        <div class="carousel-item active">
+                                            <img src="assets/images/gallery00.jpg" alt="">
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img src="assets/images/gallery01.jpg" alt="">
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img src="assets/images/gallery02.jpg" alt="">
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img src="assets/images/gallery03.jpg" alt="">
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img src="assets/images/gallery04.jpg" alt="">
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img src="assets/images/gallery05.jpg" alt="">
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img src="assets/images/gallery06.jpg" alt="">
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img src="assets/images/gallery07.jpg" alt="">
+                                        </div>
                                     </div>
-                                    <div class="carousel-item">
-                                        <img src="assets/images/gallery01.jpg" alt="">
-                                    </div>
-                                    <div class="carousel-item">
-                                        <img src="assets/images/gallery02.jpg" alt="">
-                                    </div>
-                                    <div class="carousel-item">
-                                        <img src="assets/images/gallery03.jpg" alt="">
-                                    </div>
-                                    <div class="carousel-item">
-                                        <img src="assets/images/gallery04.jpg" alt="">
-                                    </div>
-                                    <div class="carousel-item">
-                                        <img src="assets/images/gallery05.jpg" alt="">
-                                    </div>
-                                    <div class="carousel-item">
-                                        <img src="assets/images/gallery06.jpg" alt="">
-                                    </div>
-                                    <div class="carousel-item">
-                                        <img src="assets/images/gallery07.jpg" alt="">
-                                    </div>
+                                    <a class="carousel-control carousel-control-prev" role="button" data-slide="prev" href="#lb-gallery1-16">
+                                        <span class="mbri-left mbr-iconfont" aria-hidden="true"></span>
+                                        <span class="sr-only">Previous</span>
+                                    </a>
+                                    <a class="carousel-control carousel-control-next" role="button" data-slide="next" href="#lb-gallery1-16">
+                                        <span class="mbri-right mbr-iconfont" aria-hidden="true"></span>
+                                        <span class="sr-only">Next</span>
+                                    </a>
+                                    <a class="close" href="#" role="button" data-dismiss="modal">
+                                        <span class="sr-only">Close</span>
+                                    </a>
                                 </div>
-                                <a class="carousel-control carousel-control-prev" role="button" data-slide="prev" href="#lb-gallery1-16">
-                                    <span class="mbri-left mbr-iconfont" aria-hidden="true"></span>
-                                    <span class="sr-only">Previous</span>
-                                </a>
-                                <a class="carousel-control carousel-control-next" role="button" data-slide="next" href="#lb-gallery1-16">
-                                    <span class="mbri-right mbr-iconfont" aria-hidden="true"></span>
-                                    <span class="sr-only">Next</span>
-                                </a>
-                                <a class="close" href="#" role="button" data-dismiss="modal">
-                                    <span class="sr-only">Close</span>
-                                </a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
+
+        </section>
+
+        <!-- MOTIVATION -->
+        <section class="mbr-section content5 cid-qJ8oNEQWrW mbr-parallax-background" id="content5-2a">
+
+            <div class="container">
+                <div class="media-container-row">
+                    <div class="title col-12 col-md-8">
+                        <h2 class="align-center mbr-bold mbr-white pb-3 mbr-fonts-style display-1">&nbsp;</h2>
+                        <h3 class="mbr-section-subtitle align-center mbr-light mbr-white pb-3 mbr-fonts-style display-1"></h3>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- ECHIPA -->
+        <section class="features16 cid-qHgBMFVBEQ" id="features16-17">
+
+            <div class="container align-center">
+                <h2 class="pb-3 mbr-fonts-style mbr-section-title display-2">
+                    ECHIPA NOASTRĂ
+                </h2>
+                <h3 class="pb-5 mbr-section-subtitle mbr-fonts-style mbr-light display-5">
+                    Persoanele din spatele aplicației, cei care au pus cap la cap idei și cod pentru a aduce la realitate o idee care să ajute
+                    educația din România
+                </h3>
+                <div class="row media-row">
+
+                    <div class="team-item col-lg-3 col-md-6">
+                        <div class="item-image">
+                            <img src="assets/images/ralucaB.png" class="teamImage">
+                        </div>
+                        <div class="item-caption py-3">
+                            <div class="item-name px-2">
+                                <p class="mbr-fonts-style display-5">
+                                    Raluca Bacinschi - Stratulat
+                                </p>
+                            </div>
+                            <div class="item-role px-2">
+                                <p>Fata visătoare (CEO)</p>
+                            </div>
+                            <div class="item-social pt-2">
+
+                                <a href="https://www.facebook.com/raluca.bacinschi" target="_blank">
+                                    <span class="p-1 socicon-facebook socicon mbr-iconfont mbr-iconfont-social"></span>
+                                </a>
+                                <a href="mailto:raluca@izibac.ro" class="mailItem" target="_blank">
+                                    <span class="p-1 socicon-mail socicon mbr-iconfont mbr-iconfont-social"></span>
+                                </a>
+                                <a href="https://www.linkedin.com/in/bacinschir/" target="_blank">
+                                    <span class="p-1 socicon-linkedin socicon mbr-iconfont mbr-iconfont-social"></span>
+                                </a>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="team-item col-lg-3 col-md-6">
+                        <div class="item-image">
+                            <img src="assets/images/adrian.jpg" class="teamImage">
+                        </div>
+                        <div class="item-caption py-3">
+                            <div class="item-name px-2">
+                                <p class="mbr-fonts-style display-5">
+                                    Adrian Mihai Stratulat
+                                </p>
+                            </div>
+                            <div class="item-role px-2">
+                                <p>Băiatu’ cu idei (CMO)</p>
+                            </div>
+                            <div class="item-social pt-2">
+                                <a href="https://www.facebook.com/Adrian.Stratulat" target="_blank">
+                                    <span class="p-1 socicon-facebook socicon mbr-iconfont mbr-iconfont-social"></span>
+                                </a>
+                                <a href="mailto:adrian@izibac.ro" class="mailItem" target="_blank">
+                                    <span class="p-1 socicon-mail socicon mbr-iconfont mbr-iconfont-social"></span>
+                                </a>
+                                <a href="https://www.linkedin.com/in/adrianstratulat/" target="_blank">
+                                    <span class="p-1 socicon-linkedin socicon mbr-iconfont mbr-iconfont-social"></span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="team-item col-lg-3 col-md-6">
+                        <div class="item-image">
+                            <img src="assets/images/eduardL.jpg" class="teamImage">
+                        </div>
+                        <div class="item-caption py-3">
+                            <div class="item-name px-2">
+                                <p class="mbr-fonts-style display-5">
+                                    Eduard Adrian &nbsp;&nbsp;&nbsp;&nbsp;Lache&nbsp;&nbsp;&nbsp;&nbsp;
+                                </p>
+                            </div>
+                            <div class="item-role px-2">
+                                <p>Tipu’ tehnic (CTO)</p>
+                            </div>
+                            <div class="item-social pt-2">
+                                <a href="https://www.facebook.com/spedst" target="_blank">
+                                    <span class="p-1 socicon-facebook socicon mbr-iconfont mbr-iconfont-social"></span>
+                                </a>
+                                <a href="mailto:eduard@izibac.ro" class="mailItem" target="_blank">
+                                    <span class="p-1 socicon-mail socicon mbr-iconfont mbr-iconfont-social"></span>
+                                </a>
+                                <a href="https://www.linkedin.com/in/eduard-lache-6ba588b1/" target="_blank">
+                                    <span class="p-1 socicon-linkedin socicon mbr-iconfont mbr-iconfont-social"></span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="team-item col-lg-3 col-md-6">
+                        <div class="item-image">
+                            <img src="assets/images/razvanP.png" class="teamImage">
+                        </div>
+                        <div class="item-caption py-3">
+                            <div class="item-name px-2">
+                                <p class="mbr-fonts-style display-5">
+                                    Răzvan Mirel Paraschivu
+                                </p>
+                            </div>
+                            <div class="item-role px-2">
+                                <p>Artistu’ (front-end dev)</p>
+                            </div>
+                            <div class="item-social pt-2">
+                                <a href="https://www.facebook.com/mirel.razvan" target="_blank">
+                                    <span class="p-1 socicon-facebook socicon mbr-iconfont mbr-iconfont-social"></span>
+                                </a>
+                                <a href="mailto:razvan@izibac.ro" class="mailItem" target="_blank">
+                                    <span class="p-1 socicon-mail socicon mbr-iconfont mbr-iconfont-social"></span>
+                                </a>
+                                <a href="https://www.linkedin.com/in/razvan-paraschivu-9266b6131/" target="_blank">
+                                    <span class="p-1 socicon-linkedin socicon mbr-iconfont mbr-iconfont-social"></span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="team-item col-lg-3 col-md-6">
+                        <div class="item-image">
+                            <img src="assets/images/laurentiuP.png" class="teamImage">
+                        </div>
+                        <div class="item-caption py-3">
+                            <div class="item-name px-2">
+                                <p class="mbr-fonts-style display-5">
+                                    Laurențiu-Mihai Pantelimon
+                                </p>
+                            </div>
+                            <div class="item-role px-2">
+                                <p>Alchimistu' (mobile dev)</p>
+                            </div>
+                            <div class="item-social pt-2">
+                                <a href="https://www.facebook.com/laurpantelimon" target="_blank">
+                                    <span class="p-1 socicon-facebook socicon mbr-iconfont mbr-iconfont-social"></span>
+                                </a>
+                                <a href="mailto:laurentiu@izibac.ro" class="mailItem" target="_blank">
+                                    <span class="p-1 socicon-mail socicon mbr-iconfont mbr-iconfont-social"></span>
+                                </a>
+                                <a href="https://www.linkedin.com/in/laurentiu-pantelimon-3aa5b48b/" target="_blank">
+                                    <span class="p-1 socicon-linkedin socicon mbr-iconfont mbr-iconfont-social"></span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ABONEAZA-TE -->
+        <section class="mbr-section form3 cid-qHgBVJq0Lo" id="form3-18">
+
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="title col-12 col-lg-8">
+                        <h2 class="align-center pb-2 mbr-fonts-style display-2">
+                            ABONEAZĂ-TE
+                        </h2>
+                        <h3 class="mbr-section-subtitle align-center pb-5 mbr-light mbr-fonts-style display-5">
+                            Introdu adresa ta de e-mail pentru a fi anunțat când lansăm aplicația iziBac
+                        </h3>
+                    </div>
+                </div>
+
+                <div class="row py-2 justify-content-center">
+                    <div class="col-12 col-lg-6  col-md-8 " data-form-type="formoid">
+                        <div data-form-alert="" hidden="">
+                            Mulțumim pentru timpul acordat!
+                        </div>
+                        <form class="mbr-form" action="https://mobirise.com/" method="post" data-form-title="Mobirise Form">
+                            <input type="hidden" data-form-email="true" value="0aFEO9ANPCHmTJ8Jp6F/Gp+LhnyE1QjmfU1MPA1HyQekk2ubu3hQ3T3k049z0H2WuQiWWfI2uEZ5wL8zpzx4HNy6IqvRty66oYmH9nmlwEanEJUhcKVfgk9lWutGiT29">
+                            <div class="mbr-subscribe input-group">
+                                <input class="form-control" type="email" name="email" placeholder="Email" data-form-field="Email" required="" id="email-form3-18">
+                                <span class="input-group-btn">
+                                    <button href="" type="submit" class="btn btn-primary  display-4">ABONEAZĂ-TE</button>
+                                </span>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- DISTRIBUIE -->
+        <!-- <section class="cid-qHgC0PDV9R" id="social-buttons3-1a">
+
+            <div class="container">
+                <div class="media-container-row">
+                    <div class="col-md-8 align-center">
+                        <h2 class="pb-3 mbr-section-title mbr-fonts-style display-2">
+                            DISTRIBUIE ACEASTA PAGINA
+                        </h2>
+                        <div>
+                            <div class="mbr-social-likes">
+                                <span class="btn btn-social socicon-bg-facebook facebook mx-2" title="Share link on Facebook">
+                                    <i class="socicon socicon-facebook"></i>
+                                </span>
+                                <span class="btn btn-social twitter socicon-bg-twitter mx-2" title="Share link on Twitter">
+                                    <i class="socicon socicon-twitter"></i>
+                                </span>
+                                <span class="btn btn-social plusone socicon-bg-googleplus mx-2" title="Share link on Google+">
+                                    <i class="socicon socicon-googleplus"></i>
+                                </span>
+                                <span class="btn btn-social vkontakte socicon-bg-vkontakte mx-2" title="Share link on VKontakte">
+                                    <i class="socicon socicon-vkontakte"></i>
+                                </span>
+                                <span class="btn btn-social odnoklassniki socicon-bg-odnoklassniki mx-2" title="Share link on Odnoklassniki">
+                                    <i class="socicon socicon-odnoklassniki"></i>
+                                </span>
+                                <span class="btn btn-social pinterest socicon-bg-pinterest mx-2" title="Share link on Pinterest">
+                                    <i class="socicon socicon-pinterest"></i>
+                                </span>
+                                <span class="btn btn-social mailru socicon-bg-mail mx-2" title="Share link on Mailru">
+                                    <i class="socicon socicon-mail"></i>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section> -->
 
     </section>
 
-    <!-- PARALLAX BANNER -->
-    <section class="mbr-section content5 cid-qHgFkj65G0 mbr-parallax-background" id="content5-1n">
+    <!-- CONSILIERE -->
+    <section class="mbr-section info3 cid-qJ6p59NH0L mbr-parallax-background" id="general_4">
 
         <div class="container">
-            <div class="media-container-row">
-                <div class="title col-12 col-md-8">
-                    <h2 class="align-center mbr-bold mbr-white pb-3 mbr-fonts-style display-1">
-                        ARTICLE HEADER
-                    </h2>
-                    <h3 class="mbr-section-subtitle align-center mbr-light mbr-white pb-3 mbr-fonts-style display-5">
-                        Article header with background image and parallax effect
-                    </h3>
+            <div class="row justify-content-center">
+                <div class="media-container-column title col-12 col-md-10">
+                    <h2 class="align-left mbr-bold mbr-white pb-3 mbr-fonts-style display-2">
+                        Ai terminat liceul și nu știi ce facultate să faci?</h2>
+                    <h3 class="mbr-section-subtitle align-left mbr-light mbr-white pb-3 mbr-fonts-style display-5">
+                        Te putem ajuta cu consiliere vocațională și cursuri de dezvoltare personală.</h3>
 
-
+                    <div class="mbr-section-btn align-left py-4">
+                        <a class="btn btn-white-outline display-4" href="http://bacinschir.wixsite.com/altceva" target="_blank">CONSILIERE</a>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ECHIPA -->
-    <section class="features16 cid-qHgBMFVBEQ" id="features16-17">
-
-        <div class="container align-center">
-            <h2 class="pb-3 mbr-fonts-style mbr-section-title display-2">
-                ECHIPA NOASTRA
-            </h2>
-            <h3 class="pb-5 mbr-section-subtitle mbr-fonts-style mbr-light display-5">
-                Persoanele din spatele aplicatie, cei ce au pus cap la cap idei si cod pentru a aduce la realitate o idee care sa ajute educatia
-                din Romania
-            </h3>
-            <div class="row media-row">
-
-                <div class="team-item col-lg-3 col-md-6">
-                    <div class="item-image">
-                        <img src="assets/images/raluca.jpg" class="teamImage">
-                    </div>
-                    <div class="item-caption py-3">
-                        <div class="item-name px-2">
-                            <p class="mbr-fonts-style display-5">
-                                Raluca Bacinschi
-                            </p>
-                        </div>
-                        <div class="item-role px-2">
-                            <p>Creative Genius</p>
-                        </div>
-                        <div class="item-social pt-2">
-
-                            <a href="https://www.facebook.com/pages/Mobirise/1616226671953247" target="_blank">
-                                <span class="p-1 socicon-facebook socicon mbr-iconfont mbr-iconfont-social"></span>
-                            </a>
-                            <a href="https://plus.google.com/u/0/+Mobirise" class="mailItem" target="_blank">
-                                <span class="p-1 socicon-mail socicon mbr-iconfont mbr-iconfont-social"></span>
-                            </a>
-                            <a href="https://www.linkedin.com/in/mobirise" target="_blank">
-                                <span class="p-1 socicon-linkedin socicon mbr-iconfont mbr-iconfont-social"></span>
-                            </a>
-
-                        </div>
-                    </div>
-                </div>
-
-                <div class="team-item col-lg-3 col-md-6">
-                    <div class="item-image">
-                        <img src="assets/images/adrian.jpg" class="teamImage">
-                    </div>
-                    <div class="item-caption py-3">
-                        <div class="item-name px-2">
-                            <p class="mbr-fonts-style display-5">
-                                Adrian Stratulat
-                            </p>
-                        </div>
-                        <div class="item-role px-2">
-                            <p>Man with the plan</p>
-                        </div>
-                        <div class="item-social pt-2">
-                            <a href="https://www.facebook.com/pages/Mobirise/1616226671953247" target="_blank">
-                                <span class="p-1 socicon-facebook socicon mbr-iconfont mbr-iconfont-social"></span>
-                            </a>
-                            <a href="https://plus.google.com/u/0/+Mobirise" class="mailItem" target="_blank">
-                                <span class="p-1 socicon-mail socicon mbr-iconfont mbr-iconfont-social"></span>
-                            </a>
-                            <a href="https://www.linkedin.com/in/mobirise" target="_blank">
-                                <span class="p-1 socicon-linkedin socicon mbr-iconfont mbr-iconfont-social"></span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="team-item col-lg-3 col-md-6">
-                    <div class="item-image">
-                        <img src="assets/images/eduard.jpg" class="teamImage">
-                    </div>
-                    <div class="item-caption py-3">
-                        <div class="item-name px-2">
-                            <p class="mbr-fonts-style display-5">
-                                Eduard Lache
-                            </p>
-                        </div>
-                        <div class="item-role px-2">
-                            <p>Coding Prodigy</p>
-                        </div>
-                        <div class="item-social pt-2">
-                            <a href="https://www.facebook.com/pages/Mobirise/1616226671953247" target="_blank">
-                                <span class="p-1 socicon-facebook socicon mbr-iconfont mbr-iconfont-social"></span>
-                            </a>
-                            <a href="https://plus.google.com/u/0/+Mobirise" class="mailItem" target="_blank">
-                                <span class="p-1 socicon-mail socicon mbr-iconfont mbr-iconfont-social"></span>
-                            </a>
-                            <a href="https://www.linkedin.com/in/mobirise" target="_blank">
-                                <span class="p-1 socicon-linkedin socicon mbr-iconfont mbr-iconfont-social"></span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- <div class="team-item col-lg-3 col-md-6">
-                    <div class="item-image">
-                        <img src="assets/images/face6.jpg">
-                    </div>
-                    <div class="item-caption py-3">
-                        <div class="item-name px-2">
-                            <p class="mbr-fonts-style display-5">
-                                John Smith
-                            </p>
-                        </div>
-                        <div class="item-role px-2">
-                            <p>Developer</p>
-                        </div>
-                        <div class="item-social pt-2">
-                            <a href="https://twitter.com/mobirise" target="_blank">
-                                <span class="p-1 socicon-twitter socicon mbr-iconfont mbr-iconfont-social"></span>
-                            </a>
-                            <a href="https://www.facebook.com/pages/Mobirise/1616226671953247" target="_blank">
-                                <span class="p-1 socicon-facebook socicon mbr-iconfont mbr-iconfont-social"></span>
-                            </a>
-                            <a href="https://plus.google.com/u/0/+Mobirise" target="_blank">
-                                <span class="p-1 socicon-googleplus socicon mbr-iconfont mbr-iconfont-social"></span>
-                            </a>
-                            <a href="https://www.linkedin.com/in/mobirise" target="_blank">
-                                <span class="p-1 socicon-linkedin socicon mbr-iconfont mbr-iconfont-social"></span>
-                            </a>
-                            <a href="https://www.instagram.com/mobirise/" target="_blank">
-
-                            </a>
-                            <a href="https://www.youtube.com/channel/UCt_tncVAetpK5JeM8L-8jyw" target="_blank">
-
-                            </a>
-                        </div>
-                    </div>
-                </div> -->
-            </div>
-        </div>
-    </section>
-
-    <!-- ABONEAZA-TE -->
-    <section class="mbr-section form3 cid-qHgBVJq0Lo" id="form3-18">
+    <!-- CONTACT -->
+    <section class="mbr-section form1 cid-qHjaLAPeKQ" id="general_5">
 
         <div class="container">
             <div class="row justify-content-center">
                 <div class="title col-12 col-lg-8">
-                    <h2 class="align-center pb-2 mbr-fonts-style display-2">
-                        ABONEAZA-TE
+                    <h2 class="mbr-section-title align-center pb-3 mbr-fonts-style display-2">
+                        CONTACT
                     </h2>
-                    <h3 class="mbr-section-subtitle align-center pb-5 mbr-light mbr-fonts-style display-5">
-                        Introdu adresa ta de e-mail pentru a fi la curent cu toate noutatile legate de iziBac
+                    <h3 class="mbr-section-subtitle align-center mbr-light pb-3 mbr-fonts-style display-5">
+                        Dacă aveți întrebări sau sugestii, nu ezitați să ne contactați folosind formularul de mai jos.
                     </h3>
                 </div>
             </div>
-
-            <div class="row py-2 justify-content-center">
-                <div class="col-12 col-lg-6  col-md-8 " data-form-type="formoid">
+        </div>
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="media-container-column col-lg-8" data-form-type="formoid">
                     <div data-form-alert="" hidden="">
-                        Multumim pentru timpul acordat!
+                        Mulțumim pentru timpul acordat!
                     </div>
+
                     <form class="mbr-form" action="https://mobirise.com/" method="post" data-form-title="Mobirise Form">
-                        <input type="hidden" data-form-email="true" value="0aFEO9ANPCHmTJ8Jp6F/Gp+LhnyE1QjmfU1MPA1HyQekk2ubu3hQ3T3k049z0H2WuQiWWfI2uEZ5wL8zpzx4HNy6IqvRty66oYmH9nmlwEanEJUhcKVfgk9lWutGiT29">
-                        <div class="mbr-subscribe input-group">
-                            <input class="form-control" type="email" name="email" placeholder="Email" data-form-field="Email" required="" id="email-form3-18">
-                            <span class="input-group-btn">
-                                <button href="" type="submit" class="btn btn-primary  display-4">SUBSCRIBE</button>
-                            </span>
+                        <input type="hidden" data-form-email="true" value="1o29iy+T0/1/twqj2nBweZ6LRn+AsqdJTqJFJVJHLZKC/SyTISYdNybAfScQD4ElGeNNZ2i1Zn8T8tZSVJo5GvIch/lA+ViFSb1Naj0b9kwImUZXnSsR8vfv5KGqo2i4">
+                        <div class="row row-sm-offset">
+                            <div class="col-md-4 multi-horizontal" data-for="name">
+                                <div class="form-group">
+                                    <label class="form-control-label mbr-fonts-style display-7" for="name-form1-1q">Nume</label>
+                                    <input type="text" class="form-control" name="name" data-form-field="Name" required="" id="name-form1-1q">
+                                </div>
+                            </div>
+                            <div class="col-md-4 multi-horizontal" data-for="email">
+                                <div class="form-group">
+                                    <label class="form-control-label mbr-fonts-style display-7" for="email-form1-1q">Email</label>
+                                    <input type="email" class="form-control" name="email" data-form-field="Email" required="" id="email-form1-1q">
+                                </div>
+                            </div>
+                            <!-- <div class="col-md-4 multi-horizontal" data-for="phone">
+                                <div class="form-group">
+                                    <label class="form-control-label mbr-fonts-style display-7" for="phone-form1-1q">Phone</label>
+                                    <input type="tel" class="form-control" name="phone" data-form-field="Phone" id="phone-form1-1q">
+                                </div>
+                            </div> -->
                         </div>
+                        <div class="form-group" data-for="message">
+                            <label class="form-control-label mbr-fonts-style display-7" for="message-form1-1q">Mesaj</label>
+                            <textarea type="text" class="form-control" name="message" rows="7" data-form-field="Message" id="message-form1-1q"></textarea>
+                        </div>
+
+                        <span class="input-group-btn">
+                            <button href="" type="submit" class="btn btn-primary btn-form display-4">TRIMITE</button>
+                        </span>
                     </form>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- DISTRIBUIE -->
-    <section class="cid-qHgC0PDV9R" id="social-buttons3-1a">
-
-        <div class="container">
-            <div class="media-container-row">
-                <div class="col-md-8 align-center">
-                    <h2 class="pb-3 mbr-section-title mbr-fonts-style display-2">
-                        DISTRIBUIE ACEASTA PAGINA
-                    </h2>
-                    <div>
-                        <div class="mbr-social-likes">
-                            <span class="btn btn-social socicon-bg-facebook facebook mx-2" title="Share link on Facebook">
-                                <i class="socicon socicon-facebook"></i>
-                            </span>
-                            <span class="btn btn-social twitter socicon-bg-twitter mx-2" title="Share link on Twitter">
-                                <i class="socicon socicon-twitter"></i>
-                            </span>
-                            <span class="btn btn-social plusone socicon-bg-googleplus mx-2" title="Share link on Google+">
-                                <i class="socicon socicon-googleplus"></i>
-                            </span>
-                            <span class="btn btn-social vkontakte socicon-bg-vkontakte mx-2" title="Share link on VKontakte">
-                                <i class="socicon socicon-vkontakte"></i>
-                            </span>
-                            <span class="btn btn-social odnoklassniki socicon-bg-odnoklassniki mx-2" title="Share link on Odnoklassniki">
-                                <i class="socicon socicon-odnoklassniki"></i>
-                            </span>
-                            <span class="btn btn-social pinterest socicon-bg-pinterest mx-2" title="Share link on Pinterest">
-                                <i class="socicon socicon-pinterest"></i>
-                            </span>
-                            <span class="btn btn-social mailru socicon-bg-mail mx-2" title="Share link on Mailru">
-                                <i class="socicon socicon-mail"></i>
-                            </span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- TABEL -->
-    <section class="section-table cid-qHgC4OTdAj" id="table1-1b">
-
-        <div class="container container-table">
-            <h2 class="mbr-section-title mbr-fonts-style align-center pb-3 display-2">
-                Clasament aplicatie
-            </h2>
-            <!-- <h3 class="mbr-section-subtitle mbr-fonts-style align-center pb-5 mbr-light display-5">
-                Click blue "Gear" icon in the top right corner to hide/show search and info, change the the table background and other parameters.
-                In browser click on the table head to sort the table, use search to filter the table.
-            </h3> -->
-            <div class="table-wrapper">
-                <!-- <div class="container">
-                    <div class="row search">
-                        <div class="col-md-6"></div>
-                        <div class="col-md-6">
-                            <div class="dataTables_filter">
-                                <label class="searchInfo mbr-fonts-style display-7">Search:</label>
-                                <input class="form-control input-sm" disabled="">
-                            </div>
-                        </div>
-                    </div>
-                </div> -->
-
-                <div class="container scroll">
-                    <table class="table isSearch" cellspacing="0">
-                        <thead>
-                            <tr class="table-heads ">
-
-                                <th class="head-item mbr-fonts-style display-7">
-                                    RANK</th>
-                                <th class="head-item mbr-fonts-style display-7">
-                                    NUME</th>
-                                <th class="head-item mbr-fonts-style display-7">
-                                    XP</th>
-                                <th class="head-item mbr-fonts-style display-7">
-                                    PROCENTAJ INTREBARI</th>
-                                <th class="head-item mbr-fonts-style display-7">
-                                    ACURATETE</th>
-                                <th class="head-item mbr-fonts-style display-7">
-                                    PUNCTE IZI</th>
-                            </tr>
-                        </thead>
-
-                        <tbody>
-
-                            <tr>
-                                <td class="body-item mbr-fonts-style display-7">1</td>
-                                <td class="body-item mbr-fonts-style display-7">Jeanna Schmal</td>
-                                <td class="body-item mbr-fonts-style display-7">44</td>
-                                <td class="body-item mbr-fonts-style display-7">55</td>
-                                <td class="body-item mbr-fonts-style display-7">90</td>
-                                <td class="body-item mbr-fonts-style display-7">2</td>
-                            </tr>
-                            <tr>
-                                <td class="body-item mbr-fonts-style display-7">2</td>
-                                <td class="body-item mbr-fonts-style display-7">Caren Rials</td>
-                                <td class="body-item mbr-fonts-style display-7">35</td>
-                                <td class="body-item mbr-fonts-style display-7">56</td>
-                                <td class="body-item mbr-fonts-style display-7">99</td>
-                                <td class="body-item mbr-fonts-style display-7">3</td>
-                            </tr>
-                            <tr>
-                                <td class="body-item mbr-fonts-style display-7">3</td>
-                                <td class="body-item mbr-fonts-style display-7">Leon Rogol</td>
-                                <td class="body-item mbr-fonts-style display-7">66</td>
-                                <td class="body-item mbr-fonts-style display-7">67</td>
-                                <td class="body-item mbr-fonts-style display-7">90</td>
-                                <td class="body-item mbr-fonts-style display-7">5</td>
-                            </tr>
-                            <tr>
-                                <td class="body-item mbr-fonts-style display-7">4</td>
-                                <td class="body-item mbr-fonts-style display-7">Shala Barrera</td>
-                                <td class="body-item mbr-fonts-style display-7">70</td>
-                                <td class="body-item mbr-fonts-style display-7">80</td>
-                                <td class="body-item mbr-fonts-style display-7">90</td>
-                                <td class="body-item mbr-fonts-style display-7">4</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-
-                <!-- <div class="container table-info-container">
-                    <div class="row info">
-                        <div class="col-md-6">
-                            <div class="dataTables_info mbr-fonts-style display-7">
-                                <span class="infoBefore">Showing</span>
-                                <span class="inactive infoRows"></span>
-                                <span class="infoAfter">entries</span>
-                                <span class="infoFilteredBefore">(filtered from</span>
-                                <span class="inactive infoRows"></span>
-                                <span class="infoFilteredAfter"> total entries)</span>
-                            </div>
-                        </div>
-                        <div class="col-md-6"></div>
-                    </div>
-                </div> -->
-
             </div>
         </div>
     </section>
@@ -1145,7 +1047,7 @@
 
         <div class="container">
             <div class="media-container-row align-center mbr-white">
-                <div class="row row-links">
+                <!-- <div class="row row-links">
                     <ul class="foot-menu">
 
                         <li class="foot-menu-item mbr-fonts-style display-7">
@@ -1164,36 +1066,31 @@
                             <a class="text-white mbr-bold" href="#" target="_blank">Work</a>
                         </li>
                     </ul>
-                </div>
+                </div> -->
                 <div class="row social-row">
                     <div class="social-list align-right pb-2">
 
-
-
-
-
-
                         <div class="soc-item">
-                            <a href="https://twitter.com/mobirise" target="_blank">
+                            <a href="https://twitter.com/izibac" target="_blank">
                                 <span class="socicon-twitter socicon mbr-iconfont mbr-iconfont-social"></span>
                             </a>
                         </div>
                         <div class="soc-item">
-                            <a href="https://www.facebook.com/pages/Mobirise/1616226671953247" target="_blank">
+                            <a href="https://ro-ro.facebook.com/izibac/youtube" target="_blank">
                                 <span class="socicon-facebook socicon mbr-iconfont mbr-iconfont-social"></span>
                             </a>
                         </div>
                         <div class="soc-item">
-                            <a href="https://www.youtube.com/c/mobirise" target="_blank">
+                            <a href="https://www.youtube.com/channel/UC13qj6M9S5Fz3iedb8kcNYQ" target="_blank">
                                 <span class="socicon-youtube socicon mbr-iconfont mbr-iconfont-social"></span>
                             </a>
                         </div>
-                        <div class="soc-item">
+                        <!-- <div class="soc-item">
                             <a href="https://instagram.com/mobirise" target="_blank">
                                 <span class="socicon-instagram socicon mbr-iconfont mbr-iconfont-social"></span>
                             </a>
-                        </div>
-                        <div class="soc-item">
+                        </div> -->
+                        <!-- <div class="soc-item">
                             <a href="https://plus.google.com/u/0/+Mobirise" target="_blank">
                                 <span class="socicon-googleplus socicon mbr-iconfont mbr-iconfont-social"></span>
                             </a>
@@ -1202,12 +1099,13 @@
                             <a href="https://www.behance.net/Mobirise" target="_blank">
                                 <span class="socicon-behance socicon mbr-iconfont mbr-iconfont-social"></span>
                             </a>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
+
                 <div class="row row-copirayt">
                     <p class="mbr-text mb-0 mbr-fonts-style mbr-white align-center display-7">
-                        © Copyright 2017 Mobirise - All Rights Reserved
+                        © Copyright 2018 Mobirise - All Rights Reserved
                     </p>
                 </div>
             </div>

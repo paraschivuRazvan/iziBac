@@ -27,7 +27,7 @@
 }
 
 .slick-slide {
-    background: #3a8999;
+    /* background: #3a8999; */
     color: white;
     padding: 40px 0;
     font-size: 30px;
@@ -45,7 +45,7 @@
 }
 
 .slick-slide:nth-child(odd) {
-     background: #e84a69;
+    /* background: #e84a69; */
 }
 
 .mailItem{
