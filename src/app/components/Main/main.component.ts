@@ -16,25 +16,36 @@ export class MainComponent implements OnInit {
 
   currentUser = "general";
 
+  days = 0;
+  hours = 0;
+  minutes = 0;
+  seconds = 0;
+
+  countDownDate = new Date("Apr 19, 2018 20:00:00").getTime();
+
   menuToShow = [];
 
   generalMenuItems = [
     {
+
       text: "De ce iziBac",
       id: "#general_1"
     },
 
     {
+
       text: "Păreri",
       id: "#general_2"
     },
 
     {
+
       text: "Implică-te",
       id: "#general_3"
     },
 
     {
+
       text: "Consiliere",
       id: "#general_4"
     },
@@ -45,32 +56,40 @@ export class MainComponent implements OnInit {
     },
   ];
 
+
   studentMenuItems = [
     {
+
       text: "De ce iziBac",
       id: "general_1"
     },
     {
+
       text: "Functionalitati",
       id: "general_2"
     },
     {
+
       text: "Pareri",
       id: "general_3"
     },
     {
+
       text: "Media",
       id: "general_4"
     },
     {
+
       text: "Implica-te",
       id: "general_5"
     },
     {
+
       text: "Parteneri",
       id: "general_6"
     },
     {
+
       text: "Consiliere",
       id: "general_6"
     },
@@ -79,33 +98,41 @@ export class MainComponent implements OnInit {
       id: "general_7"
     },
   ];
+
 
   profMenuItems = [
     {
+
       text: "De ce iziBac",
       id: "general_1"
     },
     {
+
       text: "Functionalitati",
       id: "general_2"
     },
     {
+
       text: "Pareri",
       id: "general_3"
     },
     {
+
       text: "Media",
       id: "general_4"
     },
     {
+
       text: "Implica-te",
       id: "general_5"
     },
     {
+
       text: "Parteneri",
       id: "general_6"
     },
     {
+
       text: "Consiliere",
       id: "general_6"
     },
@@ -115,32 +142,40 @@ export class MainComponent implements OnInit {
     },
   ];
 
+
   parentMenuItems = [
     {
+
       text: "De ce iziBac",
       id: "general_1"
     },
     {
+
       text: "Functionalitati",
       id: "general_2"
     },
     {
+
       text: "Pareri",
       id: "general_3"
     },
     {
+
       text: "Media",
       id: "general_4"
     },
     {
+
       text: "Implica-te",
       id: "general_5"
     },
     {
+
       text: "Parteneri",
       id: "general_6"
     },
     {
+
       text: "Consiliere",
       id: "general_6"
     },
@@ -179,7 +214,23 @@ export class MainComponent implements OnInit {
     this.ngAfterViewInit();
   }
 
+
+
   ngOnInit() {
+
+    setInterval(function () {
+      // Get todays date and time
+      var now = new Date().getTime();
+
+      // Find the distance between now an the count down date
+      var distance = this.countDownDate - now;
+
+      // Time calculations for days, hours, minutes and seconds
+      this.days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      this.hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      this.minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      this.seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    }.bind(this), 1000);
 
     console.log(this.db);
 
@@ -192,9 +243,12 @@ export class MainComponent implements OnInit {
         console.log(items)
       });
 
+
   }
 
   ngAfterViewInit() {
+
+
 
     $(".slider").not('.slick-initialized').slick({
       autoplay: true,
@@ -205,6 +259,8 @@ export class MainComponent implements OnInit {
       slidesToScroll: 1,
       responsive: [
         {
+
+
           breakpoint: 1200,
           settings: {
             slidesToShow: 2,
@@ -214,6 +270,8 @@ export class MainComponent implements OnInit {
           }
         },
         {
+
+
           breakpoint: 992,
           settings: {
             slidesToShow: 1,

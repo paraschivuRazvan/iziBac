@@ -14,7 +14,7 @@
             <div class="menu-logo">
                 <div class="navbar-brand">
                     <span class="navbar-logo">
-                        <a href="./main">
+                        <a href="">
                             <img src="assets/images/logowhite.png" alt="iziBac" style="height: 3.8rem;">
                         </a>
                     </span>
@@ -74,14 +74,74 @@
         </div>
     </section>
 
+    <!-- COUNTDOWN -->
+
+    <section class="countdown1 cid-qOxCOvHSKJ" id="countdown1-2d">
+
+        <div class="container ">
+            <h2 class="mbr-section-title pb-3 align-center mbr-fonts-style display-2">
+                Lansăm varianta Beta IziBac pe 19 aprilie</h2>
+            <h3 class="mbr-section-subtitle align-center mbr-fonts-style display-5">
+                Dacă vrei să fii printre primii care vor testa aplicația, foloseste formularul de mai jos, înscrie-te cu adresa de e-mail,
+                și vei primi un link pentru instalarea aplicației de îndată ce este gata.</h3>
+
+        </div>
+        <div class="container countdown-cont align-center">
+            <ul>
+                <li class="countdownLi">
+                    <span class="number" id="days">{{days}}</span>Zile</li>
+                <li class="countdownLi">
+                    <span class="number" id="hours">{{hours}}</span>Ore</li>
+                <li class="countdownLi">
+                    <span class="number" id="minutes">{{minutes}}</span>Minute</li>
+                <li class="countdownLi">
+                    <span class="number" id="seconds">{{seconds}}</span>Secunde</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- ABONEAZA-TE -->
+    <section class="mbr-section form3 cid-qHgBVJq0Lo" id="form3-18">
+
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="title col-12 col-lg-8">
+                    <h2 class="align-center pb-2 mbr-fonts-style display-2">
+                        ABONEAZĂ-TE
+                    </h2>
+                    <h3 class="mbr-section-subtitle align-center pb-5 mbr-light mbr-fonts-style display-5">
+                        Introdu adresa ta de e-mail pentru a fi anunțat când lansăm aplicația IziBac
+                    </h3>
+                </div>
+            </div>
+
+            <div class="row py-2 justify-content-center">
+                <div class="col-12 col-lg-6  col-md-8 " data-form-type="formoid">
+                    <div data-form-alert="" hidden="">
+                        Mulțumim pentru timpul acordat!
+                    </div>
+                    <form class="mbr-form" action="https://mobirise.com/" method="post" data-form-title="Mobirise Form">
+                        <input type="hidden" data-form-email="true" value="0aFEO9ANPCHmTJ8Jp6F/Gp+LhnyE1QjmfU1MPA1HyQekk2ubu3hQ3T3k049z0H2WuQiWWfI2uEZ5wL8zpzx4HNy6IqvRty66oYmH9nmlwEanEJUhcKVfgk9lWutGiT29">
+                        <div class="mbr-subscribe input-group">
+                            <input class="form-control" type="email" name="email" placeholder="Email" data-form-field="Email" required="" id="email-form3-18">
+                            <span class="input-group-btn">
+                                <button href="" type="submit" class="btn btn-primary  display-4">ABONEAZĂ-TE</button>
+                            </span>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- CATEGORY SELECTION -->
-    <!-- <section class="features3 cid-qGrSfkByqU" id="features3-l">
+    <section class="features3 cid-qGrSfkByqU" id="features3-l">
         <div class="container align-center">
             <h2 class="pb-3 mbr-fonts-style mbr-section-title display-2">
                 ALEGE CATEGORIA CU CARE TE IDENTIFICI
             </h2>
             <h3 class="pb-5 mbr-section-subtitle mbr-fonts-style mbr-light display-5">
-                Pentru a beneficia de o experienta mai placuta pe site, ar fi indicat sa selectezi una din categoriile de mai jos
+                Pentru a beneficia de o experiență cât mai placută pe site, ar fi indicat să selectezi una din categoriile de mai jos
             </h3>
         </div>
 
@@ -97,7 +157,7 @@
                                 Student
                             </h4>
                             <p class="mbr-text mbr-fonts-style display-7">
-                                Esti student si vrei sa fii cat mai pregatit pentru examenul de bacalaureat
+                                Ești student și vrei să fii cât mai pregatit pentru examenul de bacalaureat
                             </p>
                         </div>
                         <div class="mbr-section-btn text-center">
@@ -118,7 +178,7 @@
                                 Profesor
                             </h4>
                             <p class="mbr-text mbr-fonts-style display-7">
-                                Esti profesor, te intereseaza si vrei sa ajuti educatia din Romania si viitorul tarii
+                                Ești profesor, te interesează și vrei sa ajuți educația din Romania și viitorul țării
                             </p>
                         </div>
                         <div class="mbr-section-btn text-center">
@@ -136,15 +196,15 @@
                         </div>
                         <div class="card-box">
                             <h4 class="card-title mbr-fonts-style display-7">
-                                Parinte
+                                Părinte
                             </h4>
                             <p class="mbr-text mbr-fonts-style display-7">
-                                Esti parinte, te intrereseaza viitorul copilului tau si vrei sa ii oferi tot ce e mai bun
+                                Ești părinte, te intreresează viitorul copilului tău și vrei să îi oferi tot ce e mai bun
                             </p>
                         </div>
                         <div class="mbr-section-btn text-center">
                             <span class="btn btn-primary display-4" (click)="setUser('parinte')">
-                                Parinte
+                                Părinte
                             </span>
                         </div>
                     </div>
@@ -154,7 +214,7 @@
             </div>
         </div>
 
-    </section> -->
+    </section>
 
     <!-- GENERAL -->
     <section id="general_1">
@@ -171,20 +231,22 @@
                                 Viziune</p>
                             <p class="mbr-author-name pt-4 mb-2 mbr-fonts-style display-7">
                                 <span style="font-weight: normal;">În cadrul echipei IziBac, considerăm cu tărie că educația este fundamentul pe care o societate
-                                    este construită. Și credem cu tărie că un viitor luminos poate să fie construit doar
-                                    de tineri care îndrăznesc să viseze, de inovatori și antreprenori, de oameni care își
-                                    urmăresc pasiunile și cărora nu le este teamă să gândească critic. În această viziune,
-                                    educația nu poate să fie decât una liberă, care să scoată la iveală potențialul ascuns
-                                    al fiecărui elev. Nu prin pedepse, ci prin stimulare. Nu prin teme impuse, curriculă
-                                    învechită și mijloace de predare care nu țin cont de schimbarea generațiilor și evoluția
-                                    tehnologică. Ci prin joacă, cea mai naturală expresie a curiozității și ingeniozității
-                                    umane. Aceasta este viziunea noastră în ceea ce privește educația viitorului.</span>
+                                    este construită.
+                                    <br>
+                                    <br> Și credem cu tărie că un viitor luminos poate să fie construit doar de către tineri
+                                    care îndrăznesc să viseze, de inovatori și antreprenori, de oameni care își urmăresc
+                                    pasiunile și cărora nu le este teamă să gândească critic. În această viziune, educația
+                                    nu poate să fie decât una liberă, care să scoată la iveală potențialul ascuns al fiecărui
+                                    elev. Nu prin pedepse, ci prin stimulare. Nu prin teme impuse, curriculă învechită și
+                                    mijloace de predare care nu țin cont de schimbarea generațiilor și evoluția tehnologică;
+                                    ci prin joacă, cea mai naturală expresie a curiozității și ingeniozității umane. Aceasta
+                                    este viziunea noastră în ceea ce privește educația viitorului.</span>
                             </p>
                             <p class="mbr-author-desc mbr-fonts-style display-7"></p>
                         </div>
 
                         <div class="mbr-figure pl-lg-5" style="width: 105%;">
-                            <img src="assets/images/mbr-1623x1080.jpg" alt="" title="">
+                            <img src="assets/images/laptop-planta.jpg" alt="" title="">
                         </div>
                     </div>
                 </div>
@@ -196,7 +258,7 @@
                 <div class="container">
                     <div class="media-container-row">
                         <div class="mbr-figure pr-lg-5" style="width: 130%;">
-                            <img src="assets/images/mbr-1672x1080.jpg" alt="" title="">
+                            <img src="assets/images/back1.jpg" alt="" title="">
                         </div>
                         <div class="media-content px-3 align-self-center mbr-white py-2">
                             <p class="mbr-text testimonial-text mbr-fonts-style display-5">
@@ -204,8 +266,7 @@
                             <p class="mbr-author-name pt-4 mb-2 mbr-fonts-style display-7"></p>
                             <p class="mbr-author-desc mbr-fonts-style display-7">Misiunea IziBac este să redea elevilor de toate vârstele plăcerea cunoașterii printr-o metodă
                                 modernă și distractivă, care îmbină cele mai moderne tehnici de gamificare cu o formă de
-                                predare inovativă, bazată pe multimedia content, interactivitate și spirit de comunitate.
-                                Deoarece credem cu tărie că educația poate fi distractivă.</p>
+                                predare inovativă, bazată pe multimedia content, interactivitate și spirit de comunitate.</p>
                         </div>
                     </div>
                 </div>
@@ -224,15 +285,17 @@
                             <p class="mbr-author-desc mbr-fonts-style display-7">
                                 O problemă socială majoră în sistemul educațional din România o reprezintă rata de promovabilitate scăzută la examenul de
                                 Bacalaureat. Elevii se tem de acest examen, iar calitatea standardului educațional este în
-                                cădere liberă. Acestea sunt însă doar două dintre simptomele unei probleme mult mai profunde
-                                – sistemul educațional din România, subfinanțat şi subdezvoltat, nu mai oferă o experiență
-                                de învățare plăcută şi compatibilă cu structura mentală a noilor generaţii, modelată de la
-                                o vârstă fragedă să se bucure de conținut video (prin televiziune și internet) şi aplicaţii
-                                interactive/de tip joc. Lumea se schimbă, tehnologia evoluează și totuși educația în România
-                                se face după aceleași principii din Perioada Revoluției Industriale, de acum 150 de ani.
+                                cădere liberă.
+                                <br>
+                                <br> Acestea sunt însă doar două dintre simptomele unei probleme mult mai profunde – sistemul
+                                educațional din România, subfinanțat şi subdezvoltat, nu mai oferă o experiență de învățare
+                                plăcută şi compatibilă cu structura mentală a noilor generaţii. Lumea se schimbă, tehnologia
+                                evoluează și totuși educația în România se face după aceleași principii de acum 150 de ani.
                                 Curricula este învechită, segmentată și nu facilitează crerea de conexiuni, iar lipsa digitalizării
-                                limitează actul învăţării la o serie rigidă de contexte. Ne propunem să schimbăm acest lucru
-                                şi să redăm plăcerea studiului pentru noile generaţii de elevi, ajutându-i să ia Bacul.</p>
+                                limitează actul învăţării la o serie rigidă de contexte.
+                                <br>
+                                <br> Ne propunem să schimbăm acest lucru şi să redăm plăcerea studiului pentru noile generaţii
+                                de elevi, ajutându-i să ia Bacul.</p>
                         </div>
 
                         <div class="mbr-figure pl-lg-5" style="width: 100%;">
@@ -244,6 +307,61 @@
 
         </section>
 
+        <!-- APLICATIE MOBILA -->
+        <section class="features14 cid-qOymjjC4iR" id="features14-2e">
+
+            <div class="container align-center">
+                <h2 class="mbr-section-title pb-3 mbr-fonts-style display-2">
+                    Android sau iOS? Why not both?</h2>
+                <h3 class="mbr-section-subtitle pb-5 mbr-fonts-style display-5">
+                    Indiferent de ce telefon ai, IziBac este pentru toți, fie că ai ultima generație de smartphone sau ceva "vintage", vei putea
+                    folosi aplicația IziBac</h3>
+                <div class="media-container-column">
+                    <div class="row justify-content-center">
+                        <div class="card p-4 col-12 col-md-6">
+                            <div class="media pb-3">
+                                <div class="card-img align-self-center">
+                                    <span class="mbr-iconfont mbri-devices"></span>
+                                </div>
+                                <div class="media-body">
+                                    <h4 class="card-title py-2 align-left mbr-fonts-style display-5">
+                                        Multiplatform</h4>
+                                </div>
+                            </div>
+                            <div class="card-box align-left">
+                                <p class="mbr-text mbr-fonts-style display-7">
+                                    Educația este pentru toți, de aceea folosim tehnologii hibride, care ne permit să oferim aplicația atât pe sisteme de operare
+                                    Android cât și iOS.</p>
+                            </div>
+                        </div>
+
+                        <div class="card p-4 col-12 col-md-6">
+                            <div class="media pb-3">
+                                <div class="card-img align-self-center">
+                                    <span class="mbr-iconfont mbri-globe"></span>
+                                </div>
+                                <div class="media-body">
+                                    <h4 class="card-title py-2 align-left mbr-fonts-style display-5">
+                                        Portabilitate</h4>
+                                </div>
+                            </div>
+                            <div class="card-box align-left">
+                                <p class="mbr-text mbr-fonts-style display-7">
+                                    Vei putea accesa aplicația de oriunde, acasă, la școală, în parc sau în metrou, orice timp liber ai la dispoziție poate fi
+                                    folosit pentru a exersa pentru BAC.</p>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="media-container-row image-row">
+                        <div class="mbr-figure" style="width: 100%;">
+                            <img src="assets/images/phones4.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- TIMELINE -->
         <section class="timeline2 cid-qJ6mWrPjhw" id="timeline2-21">
 
@@ -251,7 +369,7 @@
                 <h2 class="mbr-section-title pb-3 mbr-fonts-style display-2">
                     POVESTEA NOASTRĂ</h2>
                 <h3 class="mbr-section-subtitle pb-5 mbr-fonts-style display-5">
-                    Povestea iziBac, de la o simplă idee la ceva măreț</h3>
+                    Povestea IziBac, de la idee la cauză socială</h3>
 
                 <div class="container timelines-container" mbri-timelines="">
                     <div class="row timeline-element reverse separline">
@@ -286,7 +404,7 @@
                                     o activitate plăcută. Și și-a propus să schimbe acest lucru. Pentru acest obiectiv a
                                     urmat studii în domeniul Antreprenoriatului în educație în cadrul Universității Alternative,
                                     unde a avut ocazia să cunoscă mulți tineri inovatori, să își perfecționeze viziunea și
-                                    să construiască un plan de succes.
+                                    să construiască un plan de acțiune.
                                 </p>
                             </div>
                         </div>
@@ -300,8 +418,8 @@
                             <div class="timeline-text-content">
                                 <h4 class="mbr-timeline-title pb-3 mbr-fonts-style display-5">Următorul pas</h4>
                                 <p class="mbr-timeline-text mbr-fonts-style display-7">
-                                    Ralucăi i s-a alăturat Adrian Stratulat, soțul ei, care crede cu tărie că doar prin educație poți să faci o lume mai bună
-                                    și așa s-a născut IziBac.
+                                    Ralucăi i s-a alăturat Adrian Stratulat, soțul ei, care crede cu tărie că doar prin educație poți să faci o lume mai bună.
+                                    Așa s-a născut IziBac.
                                 </p>
                             </div>
                         </div>
@@ -317,7 +435,7 @@
                                 <p class="mbr-timeline-text mbr-fonts-style display-7">La scurt timp, Eduard Lache, un programator pasionat de educație, a crezut suficient în ceea
                                     ce atunci era doar o idee și au început să lucreze împreună pentru a dezvolta aplicația
                                     IziBac.
-                                    <br>Ideea a fost selectată în cadrul incubatorului Social Impact Awards (competiție pe care
+                                    <br>Ideea a fost selectată în cadrul incubatorului Social Impact Award (competiție pe care
                                     a și câstigat-o cu prototipul), unde a continuat dezvoltarea și maturizarea.&nbsp;</p>
                             </div>
                         </div>
@@ -436,7 +554,7 @@
                             <p class="mbr-text mbr-fonts-style display-7">
                                 "M-am bucurat mult să văd că încep să apară astfel de aplicații pe piața din România. Acum 11 ani, când am dat eu bac-ul,
                                 aveam doar hârtie și pix iar profesorii nu erau atât de cool precum cei care deja au creat
-                                întrebări pentru aplicația iziBac."
+                                întrebări pentru aplicația IziBac."
                             </p>
                         </div>
                         <div class="card-footer">
@@ -529,7 +647,7 @@
                             </div>
                             <div class="card-box">
                                 <h4 class="card-title pb-3 mbr-fonts-style display-7">
-                                    Radio Romania Actualități - IZIBAC la RRA
+                                    Radio Romania Actualități - IziBac la RRA
                                 </h4>
                             </div>
                         </div>
@@ -551,6 +669,22 @@
                         </div>
                     </div>
 
+                    <div class="card p-3 col-12 col-md-6 col-lg-2">
+                        <div class="card-wrapper">
+                            <div class="card-img">
+                                <a href="https://www.hotnews.ro/stiri-scoaladebani-22048510-video-antreprenor-startup-nation-fondatorii-izibac-aplicatie-educationala-centrata-idea-invatare-moderna-distractiva-vrem-contribuim-dezvoltarea-unui-nou-model-educational-romania.htm">
+                                    <img src="assets/images/media/hotnews.jpg" alt="HotNews">
+                                </a>
+                            </div>
+                            <div class="card-box">
+                                <h4 class="card-title pb-3 mbr-fonts-style display-7">
+                                    HotNews.ro - IziBAC, o aplicatie educationala centrata pe idea de invatare moderna si distractiva
+                                </h4>
+
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </section>
@@ -561,7 +695,7 @@
                 DOREȘTI SĂ TE IMPLICI?
             </h2>
             <h3 class="pb-5 mbr-section-subtitle mbr-fonts-style mbr-light display-5">
-                Echipa iziBac are nevoie de ajutorul tău.
+                Echipa IziBac are nevoie de ajutorul tău.
             </h3>
         </div>
 
@@ -890,40 +1024,6 @@
             </div>
         </section>
 
-        <!-- ABONEAZA-TE -->
-        <section class="mbr-section form3 cid-qHgBVJq0Lo" id="form3-18">
-
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="title col-12 col-lg-8">
-                        <h2 class="align-center pb-2 mbr-fonts-style display-2">
-                            ABONEAZĂ-TE
-                        </h2>
-                        <h3 class="mbr-section-subtitle align-center pb-5 mbr-light mbr-fonts-style display-5">
-                            Introdu adresa ta de e-mail pentru a fi anunțat când lansăm aplicația iziBac
-                        </h3>
-                    </div>
-                </div>
-
-                <div class="row py-2 justify-content-center">
-                    <div class="col-12 col-lg-6  col-md-8 " data-form-type="formoid">
-                        <div data-form-alert="" hidden="">
-                            Mulțumim pentru timpul acordat!
-                        </div>
-                        <form class="mbr-form" action="https://mobirise.com/" method="post" data-form-title="Mobirise Form">
-                            <input type="hidden" data-form-email="true" value="0aFEO9ANPCHmTJ8Jp6F/Gp+LhnyE1QjmfU1MPA1HyQekk2ubu3hQ3T3k049z0H2WuQiWWfI2uEZ5wL8zpzx4HNy6IqvRty66oYmH9nmlwEanEJUhcKVfgk9lWutGiT29">
-                            <div class="mbr-subscribe input-group">
-                                <input class="form-control" type="email" name="email" placeholder="Email" data-form-field="Email" required="" id="email-form3-18">
-                                <span class="input-group-btn">
-                                    <button href="" type="submit" class="btn btn-primary  display-4">ABONEAZĂ-TE</button>
-                                </span>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </section>
-
         <!-- DISTRIBUIE -->
         <!-- <section class="cid-qHgC0PDV9R" id="social-buttons3-1a">
 
@@ -1111,5 +1211,7 @@
             </div>
         </div>
     </section>
+
+    <input name="animation" type="hidden">
 
 </body>
