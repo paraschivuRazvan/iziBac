@@ -21,7 +21,7 @@ export class MainComponent implements OnInit {
   minutes = 0;
   seconds = 0;
 
-  countDownDate = new Date("Apr 19, 2018 20:00:00").getTime();
+  countDownDate = new Date("Apr 20, 2018 20:00:00").getTime();
 
   menuToShow = [];
 
@@ -214,8 +214,6 @@ export class MainComponent implements OnInit {
     this.ngAfterViewInit();
   }
 
-
-
   ngOnInit() {
 
     setInterval(function () {
@@ -243,12 +241,9 @@ export class MainComponent implements OnInit {
         console.log(items)
       });
 
-
   }
 
   ngAfterViewInit() {
-
-
 
     $(".slider").not('.slick-initialized').slick({
       autoplay: true,
@@ -259,8 +254,6 @@ export class MainComponent implements OnInit {
       slidesToScroll: 1,
       responsive: [
         {
-
-
           breakpoint: 1200,
           settings: {
             slidesToShow: 2,
@@ -270,8 +263,6 @@ export class MainComponent implements OnInit {
           }
         },
         {
-
-
           breakpoint: 992,
           settings: {
             slidesToShow: 1,
@@ -284,27 +275,5 @@ export class MainComponent implements OnInit {
         // instead of a settings object
       ]
     });
-
-    // $('#recipeCarousel').carousel({
-    //   interval: 10000
-    // })
-
-    // $('.carousel .carousel-item').each(function () {
-    //   var next = $(this).next();
-    //   if (!next.length) {
-    //     next = $(this).siblings(':first');
-    //   }
-    //   next.children(':first-child').clone().appendTo($(this));
-
-    //   if (next.next().length > 0) {
-    //     next.next().children(':first-child').clone().appendTo($(this));
-    //   }
-    //   else {
-    //     $(this).siblings(':first').children(':first-child').clone().appendTo($(this));
-    //   }
-    // });
-
-
   }
-
 }
