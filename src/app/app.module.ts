@@ -14,10 +14,6 @@ import { APP_CONFIG, AppConfig } from './app-config'
 import { AppComponent } from './app.component';
 
 import { MainComponent } from './components/main/main.component';
-import { HeaderComponent } from './components/Main/header/header.component';
-import { MenuComponent } from './components/Main/menu/menu.component';
-import { SubmenuComponent } from './components/Main/submenu/submenu.component';
-import { BodyComponent } from './components/Main/body/body.component';
 import { ProgressSpinnerComponent } from './components/Shared/progress-spinner/progress-spinner.component';
 import { DialogComponent } from './components/Shared/dialog/dialog.component';
 import { DialogOverviewExampleDialog } from './components/Shared/dialog/dialog.component';
@@ -28,19 +24,17 @@ import { AngularFirestoreModule } from 'angularfire2/firestore';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 // import { environment } from '../environments/environment';
 import { environment } from './../environments/environment';
+import { PrivacyComponent } from './components/privacy/privacy.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     MainComponent,
-    HeaderComponent,
-    MenuComponent,
-    SubmenuComponent,
-    BodyComponent,
     ProgressSpinnerComponent,
     DialogComponent,
-    DialogOverviewExampleDialog
+    DialogOverviewExampleDialog,
+    PrivacyComponent
 
   ],
   entryComponents: [DialogOverviewExampleDialog],

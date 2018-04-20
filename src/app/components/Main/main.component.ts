@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import * as firebase from 'firebase/app';
 import { AngularFireDatabase, AngularFireList, AngularFireObject } from 'angularfire2/database';
+import { enableProdMode } from '@angular/core';
+
+enableProdMode();
 
 declare var $: any;
 
@@ -21,7 +24,7 @@ export class MainComponent implements OnInit {
   minutes = 0;
   seconds = 0;
 
-  countDownDate = new Date("Apr 20, 2018 20:00:00").getTime();
+  countDownDate = new Date("Apr 20, 2018 23:59:00").getTime();
 
   menuToShow = [];
 

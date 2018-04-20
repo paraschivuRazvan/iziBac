@@ -5449,3 +5449,11 @@ body {
   flex-direction: column;
   -webkit-flex-direction: column;
 }
+
+.lastEdit{
+  margin-top:30px;
+}
+
+.panel-collapse{
+  color: #767676;
+}
