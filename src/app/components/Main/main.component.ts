@@ -24,7 +24,8 @@ export class MainComponent implements OnInit {
   minutes = 0;
   seconds = 0;
 
-  countDownDate = new Date("Apr 20, 2018 23:59:00").getTime();
+  // countDownDate = new Date("Apr 20, 2018 23:59:00").getTime();
+  countDownDate = new Date().getTime() + (3 * 60 * 60 * 1000);
 
   menuToShow = [];
 
