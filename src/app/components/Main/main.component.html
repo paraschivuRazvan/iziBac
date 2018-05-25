@@ -68,7 +68,7 @@
             </div>
         </div>
         <div class="mbr-arrow hidden-sm-down" aria-hidden="true">
-            <a href="#countdown1-2d">
+            <a>
                 <i class="mbri-down mbr-iconfont"></i>
             </a>
         </div>
@@ -157,6 +157,26 @@
 
     </section>
 
+    <!-- CROWDFUNDING -->
+    <section class="mbr-section info3 cid-qT3dFCDIH1 mbr-parallax-background" id="info3-34">
+        <div class="mbr-overlay" style="opacity: 0.4; background-color: rgb(35, 35, 35);">
+        </div>
+
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="media-container-column title col-12 col-md-10">
+                    <h2 class="align-left mbr-bold mbr-white pb-3 mbr-fonts-style display-1">
+                        CROWDFUNDING</h2>
+                    <h3 class="mbr-section-subtitle align-left mbr-light mbr-white pb-3 mbr-fonts-style display-2">Și tu poți fi parte din schimbarea educației din Romania.</h3>
+                    <p class="mbr-text align-left mbr-white mbr-fonts-style display-5">Fondurile obținute din campania de crowdfunding ne vor ajuta să îmbunătățim aplicația mobila și ne vor
+                        permite să creăm o platformă cu lecții video interactive.</p>
+                    <div class="mbr-section-btn align-left py-4">
+                        <a class="btn btn-primary display-4" href="https://mobirise.com">CROWDFUNDING</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- CATEGORY SELECTION -->
     <section class="features3 cid-qGrSfkByqU" id="features3-l">
@@ -172,9 +192,9 @@
         <div class="container">
             <div class="media-container-row">
                 <div class="card p-3 col-12 col-md-6 col-lg-4">
-                    <div class="card-wrapper">
+                    <div class="card-wrapper" [ngClass]="{'pulseCustom': currentUser == 'student'}">
                         <div class="card-img">
-                            <img src="assets/images/student1.jpg" alt="Mobirise">
+                            <img src="assets/images/student1.jpg" [ngClass]="{'bw': currentUser != 'student' && currentUser != 'general'}" alt="Mobirise">
                         </div>
                         <div class="card-box">
                             <h4 class="card-title mbr-fonts-style display-7">
@@ -193,9 +213,9 @@
                 </div>
 
                 <div class="card p-3 col-12 col-md-6 col-lg-4">
-                    <div class="card-wrapper">
+                    <div class="card-wrapper" [ngClass]="{'pulseCustom': currentUser == 'prof'}">
                         <div class="card-img">
-                            <img src="assets/images/prof.jpg" alt="Mobirise">
+                            <img src="assets/images/prof.jpg" [ngClass]="{'bw': currentUser != 'prof' && currentUser != 'general'}" alt="Mobirise">
                         </div>
                         <div class="card-box">
                             <h4 class="card-title mbr-fonts-style display-7">
@@ -214,9 +234,9 @@
                 </div>
 
                 <div class="card p-3 col-12 col-md-6 col-lg-4">
-                    <div class="card-wrapper">
+                    <div class="card-wrapper" [ngClass]="{'pulseCustom': currentUser == 'parinte'}">
                         <div class="card-img">
-                            <img src="assets/images/parent.jpg" alt="Mobirise">
+                            <img src="assets/images/parent.jpg" [ngClass]="{'bw': currentUser != 'parinte' && currentUser != 'general'}" alt="Mobirise">
                         </div>
                         <div class="card-box">
                             <h4 class="card-title mbr-fonts-style display-7">
@@ -387,7 +407,7 @@
         </section>
 
         <!-- GUFFO -->
-        <section class="testimonials3 cid-qR3hrH4Tnd" id="testimonials3-2n">
+        <section *ngIf="currentUser == 'student' || currentUser == 'general'" class="testimonials3 cid-qR3hrH4Tnd" id="testimonials3-2n">
 
             <div class="container">
                 <div class="media-container-row">
@@ -537,6 +557,417 @@
                     </div>
                 </div>
             </div>
+        </section>
+
+        <!-- PARINTI -->
+        <section *ngIf="currentUser == 'parinte'">
+
+            <section class="mbr-section article content9 cid-qSZ6JIV0eO" id="content9-2o">
+
+
+
+                <div class="container">
+                    <div class="inner-container" style="width: 100%;">
+                        <hr class="line" style="width: 25%;">
+                        <div class="section-text align-center mbr-fonts-style display-5">De ce IziBac este unealta potrivită pentru copilul dumneavoastră</div>
+                        <hr class="line" style="width: 25%;">
+                    </div>
+                </div>
+            </section>
+
+            <section class="mbr-section article content3 cid-qSZ7dRUMxu" id="content3-2q">
+
+
+
+                <div class="container">
+                    <div class="media-container-row">
+                        <div class="row col-12 col-md-8">
+                            <div class="col-12 col-md-6 pr-lg-4 mbr-text mbr-fonts-style display-7">Un studiu realizat în 2017 arată că adolescenții utilizează în medie telefonul mobil 3-4 ore.
+                                În acest interval de timp, 52% din timp este ocupat de jocuri video, în special de către
+                                băieți. Mai mult, este o practică comună (60% dintre adolescenți o fac) utilizarea în paralel
+                                a telefonului în timp ce învață, fapt ce contribuie la scăderea puterii de concentrare.</div>
+                            <div class="col-12 col-md-6 pl-lg-4 mbr-text mbr-fonts-style display-7">Toate acestea conduc pe bună dreptate la ideea că telefonul, rețelele sociale și jocurile mobile
+                                pot să fie un impediment în calea educației, mai ales în perioade stresante, când o cantitate
+                                mare de informație trebuie sedimentată, precum clasele terminale și pregătirea pentru Bacalaureat.</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="mbr-section article content1 cid-qSZ7xZGGGr" id="content2-2r">
+
+
+
+                <div class="container">
+                    <div class="media-container-row">
+                        <div class="mbr-text col-12 col-md-8 mbr-fonts-style display-7">
+                            <blockquote>
+                                <strong>Cum ar fi însă dacă telefonul mobil nu ar fi o distragere, ci un ajutor?</strong>
+                            </blockquote>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="mbr-section article content1 cid-qSZ7FKjUcg" id="content1-2s">
+
+
+
+                <div class="container">
+                    <div class="media-container-row">
+                        <div class="mbr-text col-12 col-md-8 mbr-fonts-style display-7">IziBac a fost conceput special pentru a capitaliza pe aceste două trenduri - creșterea gradului de
+                            utilizare al telefoanelor inteligente și apetitul adolescenților pentru joc. În loc să fie o
+                            distragere dăunatoare, IziBac transformă telefonul mobil intr-o unealta digitală, portabilă și
+                            atractivă de învățare pentru elevi. Îmbinând atractivitatea jocurilor mobile cu utilitatea materialelor
+                            didactice, IziBac reprezintă o soluție eficientă pentru pregătirea educațională a copilului dumneavoastră.</div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="mbr-section article content10 cid-qSZ7ToMU49" id="content10-2t">
+
+
+
+                <div class="container">
+                    <div class="inner-container" style="width: 100%;">
+                        <hr class="line" style="width: 25%;">
+                        <div class="section-text align-center mbr-white mbr-fonts-style display-5">Nu mai irosiți banii pe meditații, când există alternative mai ieftine și mai eficiente.</div>
+                        <hr class="line" style="width: 25%;">
+                    </div>
+                </div>
+            </section>
+
+            <section class="mbr-section article content1 cid-qSZ85L20vo" id="content1-2u">
+
+
+
+                <div class="container">
+                    <div class="media-container-row">
+                        <div class="mbr-text col-12 col-md-8 mbr-fonts-style display-7">Economia neagră a meditațiilor clasice din România este estimată la 400 milioane de euro anual. O
+                            cifră imensă care reflectă neajunsurile sistemului educațional preuniversitar din România, subfinanțat
+                            și subdezvoltat. Cu funcționalitatea de platformă video, dorim să oferim o alternativă mai ieftină,
+                            mai eficientă și mai plăcută.&nbsp;
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="mbr-section article content11 cid-qSZ8crt6Rq" id="content11-2v">
+
+
+                <div class="container">
+                    <div class="media-container-row">
+                        <div class="mbr-text counter-container col-12 col-md-8 mbr-fonts-style display-7">
+                            <ol>
+                                <li>Studiile psihologilor arată o crestere de peste 80% a gradului de implicare al elevilor în
+                                    activitatea de studiu dacă aceasta este livrată sub forma unui joc.&nbsp;</li>
+                                <li>Oferirea unui curs online interactiv și gamificat este o variantă nu doar mai plăcută și
+                                    mai usor de absorbit de către elevi (segmentarea în bucăți mai mici de lecții video ajută
+                                    în contextul scăderii intervalului de atenție), ci si una mult mai ieftină.&nbsp;</li>
+                                <li>Prin IziBac, pregătirea pentru curricula de Bacalaureat la o întreagă materie o să fie mai
+                                    ieftină decât o singură meditație în privat!</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="mbr-section article content9 cid-qSZ8Nc42PV" id="content9-2w">
+
+
+
+                <div class="container">
+                    <div class="inner-container" style="width: 100%;">
+                        <hr class="line" style="width: 25%;">
+                        <div class="section-text align-center mbr-fonts-style display-5">Elementele educaționale ale aplicației.</div>
+                        <hr class="line" style="width: 25%;">
+                    </div>
+                </div>
+            </section>
+
+            <section class="mbr-section article content1 cid-qSZ9boHodO" id="content1-2x">
+
+
+
+                <div class="container">
+                    <div class="media-container-row">
+                        <div class="mbr-text col-12 col-md-8 mbr-fonts-style display-7">Funcționalitatea primară a aplicației educaționale IziBac o reprezintă testele grilă, cu 4 variante
+                            de răspuns (și una singură corectă), pe 3 niveluri de dificultate și cu posibilitatea de a accesa
+                            explicații adiționale legate de răspunsul corect. Acestea vor fi completate în etapă ulterioară
+                            de dezvoltare prin linkuirea de lecții video care vor cuprinde întreagă curriculă pentru Bacalaureat
+                            din cadrul materiei respective, cu respectarea specializărilor selectate de elev. Pentru a oferi
+                            o educație transdisciplinară și a facilita selecția materiilor pentru Bacalaureat, vor exista
+                            de asemenea inserții aleatorii din alte materii la care elevul va trebui să răspundă pentru diverse
+                            bonusuri.
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="mbr-section article content1 cid-qSZ9mChUht" id="content1-2y">
+
+
+
+                <div class="container">
+                    <div class="media-container-row">
+                        <div class="mbr-text col-12 col-md-8 mbr-fonts-style display-7">Această structură atomică este însă primul nivel al aplicației, care generează elementele de bază
+                            din mecanica jocului ce sunt preluate în meta-jocul IziBac ce conține un univers gamificat, cu
+                            questuri, avataruri digitale, confruntări jucător versus jucător, clasamente care stimulează
+                            competiția, recompense intrinseci și extrinseci pentru autodepășire, o vizualizare a progresului
+                            în studiu, etc.&nbsp;
+                            <div>
+                                <strong>
+                                    <br>
+                                </strong>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="mbr-section article content10 cid-qSZ9DdTE2e" id="content10-2z">
+
+
+
+                <div class="container">
+                    <div class="inner-container" style="width: 100%;">
+                        <hr class="line" style="width: 25%;">
+                        <div class="section-text align-center mbr-white mbr-fonts-style display-5">De ce este atât de eficientă metoda IziBac?</div>
+                        <hr class="line" style="width: 25%;">
+                    </div>
+                </div>
+            </section>
+
+            <section class="mbr-section article content12 cid-qSZ9JEChgx" id="content12-30">
+
+
+                <div class="container">
+                    <div class="media-container-row">
+                        <div class="mbr-text counter-container col-12 col-md-8 mbr-fonts-style display-7">
+                            <ul>
+                                <li>Aplicația IziBac este construită in jurul conceptului de joc serios aplicat în procesul educațional,
+                                    concept de un real succes dovedit de studii științifice și care se bucură de o largă
+                                    implementare în Occident (conform datelor prezentate intr-un studiu al Bancii Mondiale,
+                                    până în 2020, peste 70% din populația planetei va avea acces la un smartphone, așadar
+                                    educația viitorului va fi una digitalizată, online și gamificată).</li>
+                                <li>Utilizând o serie de elemente din cadrul de gamificare Octalysis și urmărind atingerea cerințelor
+                                    psihologice ale procesului mental de tip “Flux” IziBac oferă elevilor satisfacție instantanee,
+                                    capturându-le atenția cu o experiență de joacă imersivă, distractivă și educațională.
+                                    În cadrul sesiunilor de testare ale prototipului IziBac o temă recurentă a elevilor care
+                                    descriau experiența utilizării IziBac a fost “Mă pierd în joc, mă distrez și la final
+                                    îmi dau seama că am învățat lucruri noi, însă făra percepția efortului”.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </section>
+
+        <!-- PROFESORI -->
+        <section *ngIf="currentUser == 'prof'">
+            <section class="mbr-section article content9 cid-qSZ6JIV0eO" id="content9-2o">
+
+
+
+                <div class="container">
+                    <div class="inner-container" style="width: 100%;">
+                        <hr class="line" style="width: 25%;">
+                        <div class="section-text align-center mbr-fonts-style display-5">De ce să recomandați elevilor aplicația IziBac?</div>
+                        <hr class="line" style="width: 25%;">
+                    </div>
+                </div>
+            </section>
+
+            <section class="mbr-section article content1 cid-qSZ7FKjUcg" id="content1-2s">
+
+
+
+                <div class="container">
+                    <div class="media-container-row">
+                        <div class="mbr-text col-12 col-md-8 mbr-fonts-style display-7">
+                            <p>Contextul socio-economic al ultimilor 30 de ani din România reprezinta probabil principalul factor
+                                invocat pentru justificarea evoluției sistemului educațional preuniversitar. Însă neajunsurile
+                                materiale și reformele insuficiente nu reprezintă decât jumatate din problemele cu care sistemul
+                                educațional românesc de confruntă. O temă neabordată este însă creșterea continua a necorelării
+                                metodelor de predare tradiționale la structura mentală a noilor generații de elevi și subutilizarea
+                                noilor tehnologii în procesul educațional.</p>
+                            <p></p>
+                            <div>Aceste tensiuni sunt resimțite printr-un grad tot mai scăzut de atenție și interes manifestat
+                                de elevi, excepțiile fiind doar apanajul eforturilor realizate de către cadre didactice cu
+                                un grad de dedicație peste medie. Sursele sunt multiple:</div>
+                            <div>
+                                <br>
+                            </div>
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="mbr-section article content11 cid-qSZbPwHAbk" id="content11-32">
+
+
+                <div class="container">
+                    <div class="media-container-row">
+                        <div class="mbr-text counter-container col-12 col-md-8 mbr-fonts-style display-7">
+                            <ol>
+                                <li>Accesul la joculețe crează mecanisme de tip “recompensă instantanee” în structura mentală
+                                    a tinerilor, reducând răbdarea față de actul învățării bazată pe evaluări periodice.</li>
+                                <li>Accesul timpuriu la conținut video (a cărui flux informațional este net superior lecturii)
+                                    reduce segmentele temporale de atenție în cazul predării tradiționale în clasă sau vis-a-vis
+                                    de procesul clasic al studiului după manual.</li>
+                                <li>Accesul facil la informații și comunicare prin smartphone distrage elevul de la actul învățării.</li>
+                                <li>Modele sociale de succes au creat o stigmă în percepția studiului ca activitate dezirabilă
+                                    în rândul celor de aceeași vârstă.</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="mbr-section article content10 cid-qSZ7ToMU49" id="content10-2t">
+
+
+
+                <div class="container">
+                    <div class="inner-container" style="width: 100%;">
+                        <hr class="line" style="width: 25%;">
+                        <div class="section-text align-center mbr-white mbr-fonts-style display-5">Împreună pentru educație!</div>
+                        <hr class="line" style="width: 25%;">
+                    </div>
+                </div>
+            </section>
+
+            <section class="mbr-section article content1 cid-qSZ85L20vo" id="content1-2u">
+
+
+
+                <div class="container">
+                    <div class="media-container-row">
+                        <div class="mbr-text col-12 col-md-8 mbr-fonts-style display-7">Echipa IziBac crede cu tărie că doar cu sprijinul cadrelor didactice putem realiza o schimbare în
+                            bine la nivelul sistemului educațional românesc.&nbsp;
+                            <div>
+                                <br>
+                            </div>
+                            <div>Ne puteți oferi sprijinul dumneavoastră prin:</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="mbr-section article content12 cid-qSZ9JEChgx" id="content12-30">
+
+
+                <div class="container">
+                    <div class="media-container-row">
+                        <div class="mbr-text counter-container col-12 col-md-8 mbr-fonts-style display-7">
+                            <ul>
+                                <li>Popularea joculetului educational cu intrebari de tip test grila, din programa de specialitate
+                                    pentru admiterea la Examenul de Bacalaureat, conform specializarii dumneavoastră.</li>
+                                <li>Oferirea de material educațional pentru această adaptare.</li>
+                                <li>Inregistrarea de materiale video pentru integrarea cu scop pedagogic in cadrul aplicatiei
+                                    Izibac.</li>
+                                <li>Inregistrarea drept Colaboratori ai aplicației pentru alte activități educaționale (corecturi,
+                                    oferirea de explicatii aditionale etc)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="mbr-section article content1 cid-qSZd2O6Isk" id="content2-33">
+
+
+
+                <div class="container">
+                    <div class="media-container-row">
+                        <div class="mbr-text col-12 col-md-8 mbr-fonts-style display-7">
+                            <blockquote>În acest sens, dorim să vă prezentăm un Parteneriat pentru Educație, bazat pe sprijin reciproc
+                                și construirea unei economii bazate pe cunoaștere:</blockquote>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="mbr-section article content11 cid-qSZ8crt6Rq" id="content11-2v">
+
+
+                <div class="container">
+                    <div class="media-container-row">
+                        <div class="mbr-text counter-container col-12 col-md-8 mbr-fonts-style display-7">
+                            <ol>
+                                <li>IziBac va promova profesorii parteneri ca exemplu de implicare sociala si educationala de
+                                    exceptie prin interviuri, promovarea in social media, oferirea de multumiri publice in
+                                    cadrul aplicatiei si pe site-ul companiei etc.</li>
+                                <li>IziBac va recomanda Partenerul în fața elevilor în eventualitatea în care acesta dorește
+                                    să ofere lecții particulare.&nbsp;
+                                </li>
+                                <li>IziBac ofera posibilitatea de a colabora pe baza unui contract comercial pentru realizarea
+                                    de lecții video, profitul realizat prin diseminarea acestora în rândul elevilor la nivel
+                                    național urmând a fi împărțit intr-un mod echitabil și de comun agreat.</li>
+                                <li>Partenerul va putea de asemenea să opteze a se implica remunerat în extinderea activităților
+                                    de vanzare si promovare a conținutului educațional IziBac. De asemenea, Partenerul va
+                                    putea atrage in reteaua sa alti profesori, urmand sa primeasca un procent considerabil
+                                    si din vanzarile realizate de catre acestia.&nbsp;
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="mbr-section article content9 cid-qSZ8Nc42PV" id="content9-2w">
+
+
+
+                <div class="container">
+                    <div class="inner-container" style="width: 100%;">
+                        <hr class="line" style="width: 25%;">
+                        <div class="section-text align-center mbr-fonts-style display-5">Elementele educaționale ale aplicației.</div>
+                        <hr class="line" style="width: 25%;">
+                    </div>
+                </div>
+            </section>
+
+            <section class="mbr-section article content1 cid-qSZ9boHodO" id="content1-2x">
+
+
+
+                <div class="container">
+                    <div class="media-container-row">
+                        <div class="mbr-text col-12 col-md-8 mbr-fonts-style display-7">Funcționalitatea primară a aplicației educaționale IziBac o reprezintă testele grilă, cu 4 variante
+                            de răspuns (și una singură corectă), pe 3 niveluri de dificultate și cu posibilitatea de a accesa
+                            explicații adiționale legate de răspunsul corect. Acestea vor fi completate în etapă ulterioară
+                            de dezvoltare prin linkuirea de lecții video care vor cuprinde întreagă curriculă pentru Bacalaureat
+                            din cadrul materiei respective, cu respectarea specializărilor selectate de elev. Pentru a oferi
+                            o educație transdisciplinară și a facilita selecția materiilor pentru Bacalaureat, vor exista
+                            de asemenea inserții aleatorii din alte materii la care elevul va trebui să răspundă pentru diverse
+                            bonusuri.</div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="mbr-section article content1 cid-qSZ9mChUht" id="content1-2y">
+
+
+
+                <div class="container">
+                    <div class="media-container-row">
+                        <div class="mbr-text col-12 col-md-8 mbr-fonts-style display-7">Această structură atomică este însă primul nivel al aplicației, care generează elementele de bază
+                            din mecanica jocului ce sunt preluate în meta-jocul IziBac ce conține un univers gamificat, cu
+                            questuri, avataruri digitale, confruntări jucător versus jucător, clasamente care stimulează
+                            competiția, recompense intrinseci și extrinseci pentru autodepășire, o vizualizare a progresului
+                            în studiu, etc.&nbsp;
+                            <div>
+                                <strong>
+                                    <br>
+                                </strong>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </section>
 
         <!-- OPINIILE UTILIZATORILOR -->
@@ -755,7 +1186,6 @@
                 Echipa IziBac are nevoie de ajutorul tău.
             </h3>
         </div>
-
 
         <section class="features8 cid-qHgFrFlmpN mbr-parallax-background" id="features8-1o">
 

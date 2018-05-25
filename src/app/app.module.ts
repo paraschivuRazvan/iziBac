@@ -34,7 +34,7 @@ import { PrivacyComponent } from './components/privacy/privacy.component';
     ProgressSpinnerComponent,
     DialogComponent,
     DialogOverviewExampleDialog,
-    PrivacyComponent
+    PrivacyComponent,
 
   ],
   entryComponents: [DialogOverviewExampleDialog],

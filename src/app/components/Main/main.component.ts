@@ -24,11 +24,6 @@ export class MainComponent implements OnInit {
   minutes = 0;
   seconds = 0;
 
-  // countDownDate = new Date("Apr 20, 2018 23:59:00").getTime();
-  countDownDate = new Date().getTime() + (3 * 60 * 60 * 1000);
-
-  menuToShow = [];
-
   generalMenuItems = [
     {
 
@@ -60,162 +55,15 @@ export class MainComponent implements OnInit {
     },
   ];
 
+  // countDownDate = new Date("Apr 20, 2018 23:59:00").getTime();
+  countDownDate = new Date().getTime() + (3 * 60 * 60 * 1000);
 
-  studentMenuItems = [
-    {
-
-      text: "De ce iziBac",
-      id: "general_1"
-    },
-    {
-
-      text: "Functionalitati",
-      id: "general_2"
-    },
-    {
-
-      text: "Pareri",
-      id: "general_3"
-    },
-    {
-
-      text: "Media",
-      id: "general_4"
-    },
-    {
-
-      text: "Implica-te",
-      id: "general_5"
-    },
-    {
-
-      text: "Parteneri",
-      id: "general_6"
-    },
-    {
-
-      text: "Consiliere",
-      id: "general_6"
-    },
-    {
-      text: "Contact",
-      id: "general_7"
-    },
-  ];
-
-
-  profMenuItems = [
-    {
-
-      text: "De ce iziBac",
-      id: "general_1"
-    },
-    {
-
-      text: "Functionalitati",
-      id: "general_2"
-    },
-    {
-
-      text: "Pareri",
-      id: "general_3"
-    },
-    {
-
-      text: "Media",
-      id: "general_4"
-    },
-    {
-
-      text: "Implica-te",
-      id: "general_5"
-    },
-    {
-
-      text: "Parteneri",
-      id: "general_6"
-    },
-    {
-
-      text: "Consiliere",
-      id: "general_6"
-    },
-    {
-      text: "Contact",
-      id: "general_7"
-    },
-  ];
-
-
-  parentMenuItems = [
-    {
-
-      text: "De ce iziBac",
-      id: "general_1"
-    },
-    {
-
-      text: "Functionalitati",
-      id: "general_2"
-    },
-    {
-
-      text: "Pareri",
-      id: "general_3"
-    },
-    {
-
-      text: "Media",
-      id: "general_4"
-    },
-    {
-
-      text: "Implica-te",
-      id: "general_5"
-    },
-    {
-
-      text: "Parteneri",
-      id: "general_6"
-    },
-    {
-
-      text: "Consiliere",
-      id: "general_6"
-    },
-    {
-      text: "Contact",
-      id: "general_7"
-    },
-  ];
+  menuToShow = [];
 
   setUser(user: string): void {
 
     this.currentUser = user;
 
-    switch (user) {
-      case 'student': {
-        this.menuToShow = this.studentMenuItems;
-      }
-        break;
-
-      case 'prof': {
-        this.menuToShow = this.profMenuItems;
-      }
-        break;
-
-      case 'parinte': {
-        this.menuToShow = this.parentMenuItems;
-      }
-        break;
-
-      default: {
-        this.menuToShow = this.generalMenuItems;
-      }
-        break;
-    }
-
-    this.ngAfterViewInit();
   }
 
   ngOnInit() {
