@@ -24,6 +24,8 @@ export class MainComponent implements OnInit {
   minutes = 0;
   seconds = 0;
 
+  showMenu = [];
+
   generalMenuItems = [
     {
 
@@ -55,18 +57,56 @@ export class MainComponent implements OnInit {
     },
   ];
 
+  profMenuItems = [
+    {
+
+      text: "De ce iziBac",
+      id: "#general_1"
+    },
+
+    {
+
+      text: "Păreri",
+      id: "#general_2"
+    },
+
+    {
+
+      text: "Implică-te",
+      id: "#general_3"
+    },
+
+    {
+      text: "Contact",
+      id: "#general_5"
+    },
+
+
+  ];
+
   // countDownDate = new Date("Apr 20, 2018 23:59:00").getTime();
   countDownDate = new Date().getTime() + (3 * 60 * 60 * 1000);
-
-  menuToShow = [];
 
   setUser(user: string): void {
 
     this.currentUser = user;
 
+    switch (user) {
+      case 'prof': {
+        this.showMenu = this.profMenuItems;
+      }
+        break;
+      default: {
+        this.showMenu = this.generalMenuItems;
+      }
+        break;
+    }
+
   }
 
   ngOnInit() {
+
+    this.showMenu = this.generalMenuItems;
 
     setInterval(function () {
       // Get todays date and time
@@ -84,14 +124,14 @@ export class MainComponent implements OnInit {
 
     console.log(this.db);
 
-    let ref = this.db.list('LandingPage/News');
+    // let ref = this.db.list('LandingPage/News');
 
-    console.log(ref)
+    // console.log(ref)
 
-    ref.valueChanges()
-      .subscribe(items => {
-        console.log(items)
-      });
+    // ref.valueChanges()
+    //   .subscribe(items => {
+    //     console.log(items)
+    //   });
 
   }
 

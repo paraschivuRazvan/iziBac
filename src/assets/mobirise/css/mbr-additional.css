@@ -5937,3 +5937,82 @@ body {
 .cid-qSZ9mChUht blockquote {
   color: #767676;
 }
+
+
+
+/* parinti redesign */
+
+.cid-qTmgXvDdhY {
+  padding-top: 90px;
+  padding-bottom: 60px;
+  background-image: url("../../../assets/images/laptops.jpg");
+}
+.cid-qTmc3ZXaOK {
+  padding-top: 90px;
+  padding-bottom: 90px;
+  background-color: #f9f9f9;
+}
+.cid-qTmc3ZXaOK .mbr-text {
+  color: #767676;
+}
+.cid-qTmc3ZXaOK h4 {
+  text-align: center;
+}
+.cid-qTmc3ZXaOK p {
+  text-align: center;
+}
+.cid-qTmc3ZXaOK .card-img span {
+  font-size: 96px;
+  color: #149dcc;
+}
+.cid-qTmp1gCulq {
+  padding-top: 90px;
+  padding-bottom: 60px;
+  background-image: url("../../../assets/images/laptopChart.jpg");
+}
+.cid-qTm9xGODAB {
+  padding-top: 90px;
+  padding-bottom: 60px;
+  background-image: url("../../../assets/images/phone.jpg");
+}
+.cid-qTmklemX9i {
+  padding-top: 45px;
+  padding-bottom: 60px;
+  background-color: #efefef;
+}
+.cid-qTmklemX9i .testimonial-text {
+  font-style: italic;
+  color: #676767;
+  font-weight: 300;
+}
+.cid-qTmklemX9i .mbr-author-name {
+  font-weight: bold;
+  color: #232;
+}
+.cid-qTmklemX9i .mbr-author-desc {
+  color: #232;
+}
+
+.cid-qTmGGnM24R {
+  padding-top: 90px;
+  padding-bottom: 60px;
+  background-image: url("../../../assets/images/pencil.jpg");
+}
+
+/* profi redesign */
+
+.cid-qTmOjCxw30 {
+  padding-top: 90px;
+  padding-bottom: 60px;
+  background-image: url("../../../assets/images/laptops.jpg");
+}
+.cid-qTmOkfCEU0 {
+  padding-top: 120px;
+  padding-bottom: 90px;
+  background-image: url("../../../assets/images/together.jpg");
+}
+.cid-qTmOkD1Y95 {
+  padding-top: 105px;
+  padding-bottom: 75px;
+  background-image: url("../../../assets/images/business.jpg");
+}
