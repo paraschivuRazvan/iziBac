@@ -117,3 +117,11 @@
     visibility: hidden;
     height: 0px !important;
 }
+
+.googleBadge{
+    max-width: 250px;
+}
+
+.customLaunch{
+    margin-top:30px;
+}
