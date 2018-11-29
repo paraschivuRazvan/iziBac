@@ -6172,3 +6172,29 @@ body {
     margin-top: 10px;
     width: 220px;
 }
+
+/* Video */
+
+.cid-raLZjluiBW {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background-color: #ffffff;
+}
+
+.cid-raLZjluiBW .mbr-section-subtitle {
+  color: #767676;
+}
+
+.cid-raLQnNCWd2 {
+  padding-top: 80px;
+  padding-bottom: 80px;
+  background: #f3f4f6;
+}
+.cid-raLQnNCWd2 .video-block {
+  margin: auto;
+}
+@media (max-width: 768px) {
+  .cid-raLQnNCWd2 .video-block {
+    width: 100% !important;
+  }
+}
